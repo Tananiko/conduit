@@ -1,0 +1,10 @@
+regisztráció: az alkalmazásba be lehet regisztrálni, név, emailcím és jelszó megadásával
+bejelentkezés: az alkalmazásba be lehet jelentkezni egy meglévő felhasználói fiókkal
+kijelentkezés: az alkalmazásból ki lehet jelentkezni
+Post létrehozása: az alkalmazásban bejelentkezés után lehet létrehozni postot
+Post szerekesztése: az alkalmazásaban saját meglévő post szerkesztése lehetséges
+Post törlése: az alkalmazásban saját post törlése lehetséges
+Post cimkézése: az alkalmazásban saját posthozlehet taget hozzáadni
+Post cimke alapán való keresése: az alkalmazásban lehetséges 
+Post like-olása:az alkalmazásban saját és más felhasználó által létrehozott post like-olása lehetséges
+Felhasználó követése: az alkalmazásban más felhasználó és annak postjainak követése lehetséges
