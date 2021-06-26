@@ -1,1 +1,43 @@
+Ellenőrizzük, hogy a weboldal  a https://react-layr-realworld-example-app.layrjs.com/all címen elérhető - e ? 
+Ellenőrizzük, hogy a fejlesztői nézetben minden hibamentesen jelenik – e meg 	
+Ellenőrizzük, hogy működik – e a Tab bejárás az oldalon ? 	
+Ellenőrizzük, hogy a Conduit felirat kattintható – e ?	
+Ellenőrizzük, hogy a Conduit felirat kattintásra kapunk – e újabb információt az oldalról	
+Ellenőrizzük, hogy a Home / Sing – in / Sign up feliratok kattinthatók-e ? 	
+Ellenőrizzük a Sign Up funkciót , megjelennek – e a szükséges mezők a bejelentkezéshez? 	
+Ellenőrizzük a Sign Up funkciót , Kapunk – e tájékoztatást, hogy milyen lehet a username , az emailcím, password ? 	
+Ellenőrizzük a Sign Up funkciót , A Have an Account kattintható – e és átnavigál – e a Sing in ablakba? 	
+Ellenőrizzük a Sign In funkciót , megjelennek – e a szükséges mezők a bejelentkezéshez?	
+Ellenőrizzük a Sign In funkciót , A Need an Account kattintható – e és átnavigál – e a Sing Up ablakba?	
+Ellenőrizzük a Sign Up funkciót , kapunk – e a mailboxunkba visszaigazoló emailt , amin meg kell erősítenünk a feliratkozási szándékunkat	
+Ellenőrizzük a Sing up funkciót – Username 	Speciális karakterek & , @, $,_ és szóköz nem használható 
+Ellenőrizzük a Sing up funkciót – Emailaddress , van – e validáció	Bármilyen emailcím beírható  - 
+Ellenőrizzük a Sing up funkciót – Password , 	Nincs infó, hogy milyen hosszú lehet?  255 és 256 karakterrel is lehetséges a feliratkozás 
+Ellenőrizzük, hogy fel tudunk-e tölteni saját profilképet 	
+Ellenőrizzük a sing in funkciót 	255 és 256 karakteres regisztrációval nem lehet belépni az oldalra
+Ellenőrizzük, hogy van -e jelszóemlékeztető kérése funkció 	
+Van – e Log out gomb? 	
+Lehet -e log outolni valahol az oldalon – 	Settings alatt Or click here to logout gomb
+Ellenőrizzük a Blog author Following funkciót 	
+Ellenőrizzük, hogy megnézhető- e , ki follows-ta a saját profilunkat ? 	
+Ellenőrizzük, az articlehöz fűzött comment lehetőségét 	
+Ellenőrizzük ,hogy lehet – e az oldalon keresni cikket , blog authort 	
+Ellenőrizzük, hogy a Blog postok megjelennnek – e listában ? 	
+Ellenőrizzük New Post felvitelét – Article Titel 	Nincs info, hogy milyen hosszú lehet a cím 
+Ellenőrizzük New Post felvitelét – Article 	Nincs info, hogy milyen hosszú lehet az article 
+Ellenőrizzük New Post felvitelét – Enter Tags  	Nincs legördülő , amiből lehetne választani  
+Ellenőrizzük New Post felvitelét – Enter Tags  	Speciális karakterek & , @, $,_ és szóköz , NAGYBETŰ nem használható . 
+Ellenőrizzük New Post felvitelét – Publish Article gomb 	Saját profil alatt látszik 
+Ellenőrizzük New Post felvitelét – Publish Article gomb – Home – Your Feed  	Home megnyomása után, your feed alatt nem látható  
+Ellenőrizzük New Post felvitelét – Publish Article gomb – Home – Global  Feed  	Home megnyomása után, global feed alatt nem látható  
+Ellenőrizzük, az Article Detail view funkciót 	
+Ellenőrizzük az Edit My existing blog Post funkciót	
+Ellenőrizzük, a delete my blog post funkciót 	
+Like gomb ellenőrzése 	Saját cikk is like-olható, ekkor zöld alapon jelenik me g a szivecske 
+Ellenőrizzük a profilt a főmenüben  - My Articles 	Megjelenik a cikk 
+Ellenőrizzük a profilt a főmenüben  - Favourited Articles 	Megjelenik a like-olt cikk 
+Ellenőrizzük, hogy a blogpostok oldalszámozva jelennek – e meg?	IceBreaker felhasználó alatt 
+Ellenőrizzük a Use of Tags funkciót	Speciális karakterek & , @, $,_ és szóköz , NAGYBETŰ nem használható .
+Ellenőrizzük a Tag Feed Page funkciót	
+Ellenőrizzük, hogy a profil törölhető – e vagy felfüggeszthető – e ? 	
 
