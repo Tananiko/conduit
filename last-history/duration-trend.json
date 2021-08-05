@@ -1,3 +1,6 @@
 [ {
+  "buildOrder" : 2,
+  "reportUrl" : "https://Tananiko.github.io/conduit/2/",
+  "reportName" : "Allure Report with history",
   "data" : { }
 } ]
