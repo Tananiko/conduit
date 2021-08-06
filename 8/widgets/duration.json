@@ -1,0 +1,21 @@
+[ {
+  "uid" : "79c63fb40c52f849",
+  "name" : "test_home_page_appearances",
+  "time" : {
+    "start" : 1628233409226,
+    "stop" : 1628233409270,
+    "duration" : 44
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b4b4bd711b59cb3b",
+  "name" : "test_website",
+  "time" : {
+    "start" : 1628233411182,
+    "stop" : 1628233411240,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
