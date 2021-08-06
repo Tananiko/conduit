@@ -1,5 +1,5 @@
 selenium==3.141.0
 urllib3==1.26.5
 pytest
-allure_pítest==2.8.40
+allure_pytest==2.8.40
 webdriver-manager

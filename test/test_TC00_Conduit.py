@@ -26,17 +26,14 @@ class TestConduit(object):
 
     def test_website(self):
         # self.driver.maximize_window()
-        home_element = self.driver.find_elements_by_link_text('Home')
+        self.driver.find_elements_by_link_text('Home')
         self.driver.find_elements_by_link_text('Sign in')
         self.driver.find_elements_by_link_text('Sign up')
         self.driver.find_element_by_link_text('Global Feed')
 
-        list = [home_element.text, 'Sign in', 'Sign up', 'Global Feed']
-        for i in list:
-            element = WebDriverWait(
-                self.driver, 5).until(EC.visibility_of_all_elements_located((By.LINK_TEXT, f"{i.text}"))
-            )
-            assert element
+
+
+
 
 
 
