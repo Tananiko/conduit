@@ -1,0 +1,77 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "test",
+    "children" : [ {
+      "name" : "test_TC00_Conduit",
+      "children" : [ {
+        "name" : "TestConduit",
+        "children" : [ {
+          "name" : "test_home_page_appearances",
+          "uid" : "1d0766fa87b5130",
+          "parentUid" : "65ef327f0c4807d98ddb8086d2dfde20",
+          "status" : "passed",
+          "time" : {
+            "start" : 1628237162882,
+            "stop" : 1628237162919,
+            "duration" : 37
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_website",
+          "uid" : "462ce7495dde3467",
+          "parentUid" : "65ef327f0c4807d98ddb8086d2dfde20",
+          "status" : "passed",
+          "time" : {
+            "start" : 1628237164798,
+            "stop" : 1628237164853,
+            "duration" : 55
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "65ef327f0c4807d98ddb8086d2dfde20"
+      } ],
+      "uid" : "5a106f624f56d22aa0365c743cc73c3c"
+    }, {
+      "name" : "test_TC01_Regisztracio",
+      "children" : [ {
+        "name" : "TestRegistrationConduit",
+        "children" : [ {
+          "name" : "test_website",
+          "uid" : "fda4654f6da3ae2b",
+          "parentUid" : "dfded031404a47394fc5e7f32aa096f0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1628237165739,
+            "stop" : 1628237167874,
+            "duration" : 2135
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_registration",
+          "uid" : "64679d83029d383b",
+          "parentUid" : "dfded031404a47394fc5e7f32aa096f0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1628237169758,
+            "stop" : 1628237171185,
+            "duration" : 1427
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "dfded031404a47394fc5e7f32aa096f0"
+      } ],
+      "uid" : "881ac9e741885b9574d1719b8c2cf9f4"
+    } ],
+    "uid" : "ff2b04dbb9c449a4d40723f51d841925"
+  } ],
+  "name" : "suites"
+}
