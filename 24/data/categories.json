@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: 'str' object is not callable",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "dd6a4db69b9f310e",
+        "parentUid" : "ba53e30424888b9fd1a29e4c8f868ba4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628348854237,
+          "stop" : 1628348856022,
+          "duration" : 1785
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ba53e30424888b9fd1a29e4c8f868ba4"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[normalize-space()='A1']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_navigate_to_login",
+        "uid" : "bde02964abe2c542",
+        "parentUid" : "37697f64289d9a55163793af031af325",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628348865641,
+          "stop" : 1628348865986,
+          "duration" : 345
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "37697f64289d9a55163793af031af325"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
