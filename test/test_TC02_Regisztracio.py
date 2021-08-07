@@ -37,7 +37,7 @@ class TestRegistrationConduit(object):
         self.driver.find_element_by_xpath('//form/button').click()
 
         element = WebDriverWait(
-            self.driver, 5).until(
+            self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))
         )
 
