@@ -30,9 +30,9 @@ class TestRegistrationConduit(object):
     def test_registration(self):
 
         self.driver.find_element_by_xpath('/html/body//a[contains(@href,"register")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A4")
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko4@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-4")
+        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A5")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko5@gmail.com")
+        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-5")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
         WebDriverWait(
@@ -48,5 +48,5 @@ class TestRegistrationConduit(object):
 
         # WebDriverWait(
         #    self.driver, 50).until(
-        #     EC.visibility_of_element_located((By.LINK_TEXT, "A4"))
+        #     EC.visibility_of_element_located((By.LINK_TEXT, "A5"))
         # )
