@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'Registration failed!' == 'Welcome!'\n  - Welcome!\n  + Registration failed!",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "9706ffbb498d97dc",
+        "parentUid" : "6a5b187d38279038f66a6515a608cf35",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628338483296,
+          "stop" : 1628338484984,
+          "duration" : 1688
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6a5b187d38279038f66a6515a608cf35"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: click() takes 1 positional argument but 2 were given",
+      "children" : [ {
+        "name" : "test_navigate_to_login",
+        "uid" : "a67d0e584a5b0078",
+        "parentUid" : "6bdba7dd8573e4b7ee8a215311dd56fd",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628338490113,
+          "stop" : 1628338490294,
+          "duration" : 181
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6bdba7dd8573e4b7ee8a215311dd56fd"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
