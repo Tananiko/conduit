@@ -8,10 +8,9 @@ import datetime
 import time
 from selenium.webdriver.common.keys import Keys
 
-class TestRegistrationConduit(object):
+class TestLoginConduit(object):
 
     def setup(self):
-        # self.driver = webdriver.Chrome("/Users/tarjanyibela/Downloads/chromedriver")
         browser_options = Options()
         browser_options.headless = True
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
@@ -26,21 +25,19 @@ class TestRegistrationConduit(object):
         assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
                                                  ).text == "conduit"
 
-
-    def test_registration(self):
-
-        self.driver.find_element_by_xpath('/html/body//a[contains(@href,"register")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A1")
+    def test_navigate_to_login(self):
+        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
-        self.driver.find_element_by_xpath('//form/button').click()
+        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').click("Tananiko-1")
 
         element = WebDriverWait(
-            self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))
+            self.driver, 5).until(
+            EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))).click()
 
+        assert element
+
+        element = WebDriverWait(
+            self.driver, 3).until(
+            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
         )
-        assert self.driver.find_element_by_css_selector(".swal-title").text == "Welcome!"
-        self.driver.find_element_by_css_selector('.swal-button.swal-button--confirm').click()
-        self.driver.find_elements_by_css_selector('li.nav-item')
-        assert self.driver.find_element_by_xpath('/html/bodydiv[1]/nav/div/ul/li[4]/a').text == "A1"
+        assert element
