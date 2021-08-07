@@ -30,9 +30,9 @@ class TestRegistrationConduit(object):
     def test_registration(self):
 
         self.driver.find_element_by_xpath('/html/body//a[contains(@href,"register")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A3")
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko3@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-3")
+        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A4")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko4@gmail.com")
+        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-4")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
         WebDriverWait(
@@ -41,12 +41,12 @@ class TestRegistrationConduit(object):
         )
 
 
-        welcome = self.driver.find_element_by_xpath("//div[@class= 'swal-title']")
-        assert welcome.text == "Welcome!"
+        welcome = self.driver.find_element_by_xpath("//div[@class= 'swal-text']")
+        assert welcome.text == "Your registration was successful!"
         self.driver.find_element(By.CSS_SELECTOR('.swal-button.swal-button--confirm')).click()
         self.driver.find_elements(By.CSS_SELECTOR('li.nav-item'))
 
         # WebDriverWait(
         #    self.driver, 50).until(
-        #     EC.visibility_of_element_located((By.LINK_TEXT, "A3"))
+        #     EC.visibility_of_element_located((By.LINK_TEXT, "A4"))
         # )
