@@ -33,11 +33,10 @@ class TestLoginConduit(object):
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
-        element = WebDriverWait(
+        WebDriverWait(
             self.driver, 15).until(
             EC.visibility_of_element_located((By.XPATH, "//button[normalize-space()='OK']"))
         )
-
 
         self.driver.find_element_by_css_selector('.swal-title').text == "Welcome!"
         self.driver.find_element_by_css_selector('.swal-button.swal-button--confirm').click()
@@ -47,15 +46,7 @@ class TestLoginConduit(object):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
+        self.driver.find_element_by_xpath("//button[normalize-space()='Sign in']").click()
+        self.driver.find_elements_by_css_selector('li.nav-item')
 
-        element = WebDriverWait(
-            self.driver, 15).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))).click()
-
-        assert element
-
-        element = WebDriverWait(
-            self.driver, 15).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
-        assert element
+        assert self.driver.find_element_by_xpath("//a[normalize-space()='A1']")

@@ -35,17 +35,17 @@ class TestRegistrationConduit(object):
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
-        element = WebDriverWait(
+        WebDriverWait(
             self.driver, 15).until(
             EC.visibility_of_element_located((By.XPATH, "//button[normalize-space()='OK']"))
         )
 
 
-        self.driver.find_element_by_css_selector('.swal-title').text == "Welcome!"
-        self.driver.find_element_by_css_selector('.swal-button.swal-button--confirm').click()
-        self.driver.find_elements_by_css_selector('li.nav-item')
+        assert self.driver.find_element(by=By.CSS_SELECTOR,'.swal-title').text == "Welcome!"
+        self.driver.find_element(by=By.CSS_SELECTOR, '.swal-button.swal-button--confirm').click()
+        self.driver.find_elements(by=By.CSS_SELECTOR,'li.nav-item')
 
-        # element = WebDriverWait(
-        #     self.driver, 15).until(
-        #     EC.visibility_of_element_located((By.XPATH, "//a[normalize-space()='A1']"))
-        # )
+        WebDriverWait(
+            self.driver, 15).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[normalize-space()='A1']"))
+        )
