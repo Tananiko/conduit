@@ -41,11 +41,11 @@ class TestRegistrationConduit(object):
         )
 
 
-        assert self.driver.find_element(by=By.CSS_SELECTOR (".swal-title").text == "Welcome!")
+        assert self.driver.find_element(by=By.CSS_SELECTOR, ".swal-title").text == "Welcome!"
         self.driver.find_element(by=By.CSS_SELECTOR ('.swal-button.swal-button--confirm').click())
         self.driver.find_elements(by=By.CSS_SELECTOR ('li.nav-item'))
 
-        WebDriverWait(
-           self.driver, 50).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A2"))
-        )
+        # WebDriverWait(
+        #    self.driver, 50).until(
+        #     EC.visibility_of_element_located((By.LINK_TEXT, "A2"))
+        # )
