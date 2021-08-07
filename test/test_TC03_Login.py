@@ -28,7 +28,7 @@ class TestLoginConduit(object):
     def test_navigate_to_login(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').click("Tananiko-1")
+        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
 
         element = WebDriverWait(
             self.driver, 5).until(
