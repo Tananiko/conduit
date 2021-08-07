@@ -34,7 +34,7 @@ class TestLoginConduit(object):
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
         WebDriverWait(
-            self.driver, 15).until(
+            self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, "//button[normalize-space()='OK']"))
         )
 
