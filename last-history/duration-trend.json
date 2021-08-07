@@ -1,8 +1,6 @@
 [ {
-  "buildOrder" : 15,
-  "reportUrl" : "https://Tananiko.github.io/conduit/15/",
+  "buildOrder" : 16,
+  "reportUrl" : "https://Tananiko.github.io/conduit/16/",
   "reportName" : "Allure Report with history",
-  "data" : {
-    "duration" : 24083
-  }
+  "data" : { }
 } ]
