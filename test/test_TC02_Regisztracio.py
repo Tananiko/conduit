@@ -43,10 +43,9 @@ class TestRegistrationConduit(object):
 
         welcome = self.driver.find_element_by_xpath("//div[@class= 'swal-text']")
         assert welcome.text == "Your registration was successful!"
-        self.driver.find_element(By.CSS_SELECTOR('.swal-button.swal-button--confirm')).click()
-        self.driver.find_elements(By.CSS_SELECTOR('li.nav-item'))
+        reg_button = self.driver.find_element_by_xpath("//button[normalize-space()='OK']")
+        reg_button.click()
+        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
+        reg_name = nav_items[3].text
+        assert reg_name == "A5"
 
-        # WebDriverWait(
-        #    self.driver, 50).until(
-        #     EC.visibility_of_element_located((By.LINK_TEXT, "A5"))
-        # )
