@@ -44,8 +44,4 @@ class TestRegistrationConduit(object):
         self.driver.find_element(by=By.CSS_SELECTOR (".swal-title").text == "Welcome!")
         self.driver.find_element(by=By.CSS_SELECTOR ('.swal-button.swal-button--confirm').click())
         self.driver.find_elements(by=By.CSS_SELECTOR ('li.nav-item'))
-
-        # element = WebDriverWait(
-        #     self.driver, 15).until(
-        #     EC.visibility_of_element_located((By.XPATH, "//a[normalize-space()='A1']"))
-        # )
+        assert self.driver.find_element_by_xpath("//a[normalize-space()='A1']")
