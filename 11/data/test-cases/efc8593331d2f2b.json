@@ -1,12 +1,12 @@
 {
-  "uid" : "64679d83029d383b",
+  "uid" : "efc8593331d2f2b",
   "name" : "test_registration",
   "fullName" : "test.test_TC01_Regisztracio.TestRegistrationConduit#test_registration",
   "historyId" : "4cec880a8c3350f6cd5bc49d3eb47007",
   "time" : {
-    "start" : 1628237169758,
-    "stop" : 1628237171185,
-    "duration" : 1427
+    "start" : 1628322782335,
+    "stop" : 1628322783878,
+    "duration" : 1543
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,15 +16,15 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "1f7b26f958c33026",
+      "uid" : "3d83e2ed2c354eed",
       "name" : "log",
-      "source" : "1f7b26f958c33026.txt",
+      "source" : "3d83e2ed2c354eed.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "997bddce47e99139",
+      "uid" : "77628e835e042a58",
       "name" : "stderr",
-      "source" : "997bddce47e99139.txt",
+      "source" : "77628e835e042a58.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
@@ -46,10 +46,10 @@
     "value" : "TestRegistrationConduit"
   }, {
     "name" : "host",
-    "value" : "fv-az72-552"
+    "value" : "fv-az47-991"
   }, {
     "name" : "thread",
-    "value" : "3769-MainThread"
+    "value" : "3712-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "64679d83029d383b.json",
+  "source" : "efc8593331d2f2b.json",
   "parameterValues" : [ ]
 }

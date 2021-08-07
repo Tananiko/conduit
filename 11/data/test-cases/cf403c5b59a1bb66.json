@@ -1,12 +1,12 @@
 {
-  "uid" : "fda4654f6da3ae2b",
+  "uid" : "cf403c5b59a1bb66",
   "name" : "test_website",
-  "fullName" : "test.test_TC01_Regisztracio.TestRegistrationConduit#test_website",
-  "historyId" : "3ae63c312a296b4d8f1b604f8e0afa57",
+  "fullName" : "test.test_TC00_Conduit.TestConduit#test_website",
+  "historyId" : "b361cc3af797a1983e1029e420b8d68c",
   "time" : {
-    "start" : 1628237165739,
-    "stop" : 1628237167874,
-    "duration" : 2135
+    "start" : 1628322777362,
+    "stop" : 1628322777412,
+    "duration" : 50
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,15 +16,15 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "a06b305a0cade8f6",
+      "uid" : "9d900958e1b01c55",
       "name" : "log",
-      "source" : "a06b305a0cade8f6.txt",
+      "source" : "9d900958e1b01c55.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "b2853ae36ab557d6",
+      "uid" : "2710abac13e8e39b",
       "name" : "stderr",
-      "source" : "b2853ae36ab557d6.txt",
+      "source" : "2710abac13e8e39b.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
@@ -40,16 +40,16 @@
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_TC01_Regisztracio"
+    "value" : "test_TC00_Conduit"
   }, {
     "name" : "subSuite",
-    "value" : "TestRegistrationConduit"
+    "value" : "TestConduit"
   }, {
     "name" : "host",
-    "value" : "fv-az72-552"
+    "value" : "fv-az47-991"
   }, {
     "name" : "thread",
-    "value" : "3769-MainThread"
+    "value" : "3712-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -58,7 +58,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_TC01_Regisztracio"
+    "value" : "test.test_TC00_Conduit"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "fda4654f6da3ae2b.json",
+  "source" : "cf403c5b59a1bb66.json",
   "parameterValues" : [ ]
 }
