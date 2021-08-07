@@ -40,17 +40,14 @@ class TestLogoutConduit(object):
         )
 
     def test_navigate_to_logout(self):
-        self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
+        self.driver.find_element_by_xpath('//*[@class="nav-link" and contains(text(),"Log out")]')
         element = WebDriverWait(
             self.driver, 5).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/nav/div/ul/li[5]/a')).click()
         )
-
-        assert element
 
     def test_website(self):
             self.driver.maximize_window()
             self.driver.find_elements_by_link_text('Home')
             self.driver.find_elements_by_link_text('Sign in')
             self.driver.find_elements_by_link_text('Sign up')
-            self.driver.find_element_by_link_text('Global Feed')

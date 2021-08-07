@@ -39,7 +39,11 @@ class TestRegistrationConduit(object):
         element = WebDriverWait(
             self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))
-        )
 
-        # self.driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[4]/a').text
-        # assert element == "A1"
+        )
+        assert self.driver.find_element_by_xpath('/html/body/div[2]/div/div[2]').text == "Welcome!"
+        assert self.driver.find_element_by_xpath('/html/body/div[2]/div/div[3]').text == "Your registration was successful!"
+        self.driver.find.element_by_xpath('/html/body/div[2]/div/div[4]/div/button').click()
+
+        self.driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[4]/a').text
+        assert element == "A1"
