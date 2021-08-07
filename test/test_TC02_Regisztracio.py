@@ -41,9 +41,9 @@ class TestRegistrationConduit(object):
             EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))
 
         )
-        assert self.driver.find_element_by_xpath('/html/body/div[2]/div/div[2]').text == "Welcome!"
-        assert self.driver.find_element_by_xpath('/html/body/div[2]/div/div[3]').text == "Your registration was successful!"
-        self.driver.find.element_by_xpath('/html/body/div[2]/div/div[4]/div/button').click()
+        assert self.driver.find_element_by_css_selector(".swal-title").text == "Welcome!"
+        assert self.driver.find_element_by_css_selector('/.swal-text').text == "Your registration was successful!"
+        self.driver.find.element_by_css_selector('.swal-button.swal-button--confirm').click()
 
         self.driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[4]/a').text
         assert element == "A1"
