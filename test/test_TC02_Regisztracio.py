@@ -30,9 +30,9 @@ class TestRegistrationConduit(object):
     def test_registration(self):
 
         self.driver.find_element_by_xpath('/html/body//a[contains(@href,"register")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A5")
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko5@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-5")
+        self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A6")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko6@gmail.com")
+        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-6")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
         WebDriverWait(
@@ -47,5 +47,5 @@ class TestRegistrationConduit(object):
         reg_button.click()
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
         reg_name = nav_items[3].text
-        assert reg_name == "A5"
+        assert reg_name == "A6"
 
