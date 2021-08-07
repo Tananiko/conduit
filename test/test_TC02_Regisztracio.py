@@ -41,7 +41,8 @@ class TestRegistrationConduit(object):
         )
 
 
-        assert self.driver.find_element(by=By.CSS_SELECTOR (".swal-title")).text == "Welcome!"
+        welcome = self.driver.find_element(by=By.CSS_SELECTOR (".swal-title"))
+        assert welcome.text == "Welcome!"
         self.driver.find_element(by=By.CSS_SELECTOR ('.swal-button.swal-button--confirm').click())
         self.driver.find_elements(by=By.CSS_SELECTOR ('li.nav-item'))
 
