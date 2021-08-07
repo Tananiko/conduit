@@ -33,14 +33,13 @@ class TestRegistrationConduit(object):
         self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A1")
         self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
-        self.driver.find_element_by_xpath('//form/button').click()
+        self.driver.find_element_by_xpath('//button[normalize-space()='Sign up']').click()
 
-        element = WebDriverWait(
-            self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))
+      element = WebDriverWait(
+            self.driver, 15).until(
+            EC.visibility_of_element_located((By.XPATH, "//button[normalize-space()='OK']"))
 
         )
-        assert self.driver.find_element_by_css_selector(".swal-title").text == "Welcome!"
+        assert self.driver.find_element_by_xpath("//div[@class='swal-title']").text == "Welcome!"
         self.driver.find_element_by_css_selector('.swal-button.swal-button--confirm').click()
-        self.driver.find_elements_by_css_selector('li.nav-item')
-        assert self.driver.find_element_by_xpath('/html/bodydiv[1]/nav/div/ul/li[4]/a').text == "A1"
+        self.driver.find_element_by_css_selector("nav[class='navbar navbar-light'] li:nth-child(4)").text == "A1"
