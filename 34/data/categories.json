@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'Email already taken.' == 'Welcome!'\n  - Welcome!\n  + Email already taken.",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "7058177f44d27084",
+        "parentUid" : "b32186d17f292c87494b230c660bf6cf",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628355942074,
+          "stop" : 1628355943549,
+          "duration" : 1475
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b32186d17f292c87494b230c660bf6cf"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
