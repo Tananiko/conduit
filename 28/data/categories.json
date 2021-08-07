@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: 'str' object is not callable",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "141575f50bf96539",
+        "parentUid" : "ba53e30424888b9fd1a29e4c8f868ba4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628354571546,
+          "stop" : 1628354573149,
+          "duration" : 1603
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ba53e30424888b9fd1a29e4c8f868ba4"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
