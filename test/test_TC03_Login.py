@@ -33,7 +33,7 @@ class TestLoginConduit(object):
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 
-        WebDriverWait(
+        element = WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, "//button[normalize-space()='OK']"))
         )
@@ -49,4 +49,7 @@ class TestLoginConduit(object):
         self.driver.find_element_by_xpath("//button[normalize-space()='Sign in']").click()
         self.driver.find_elements_by_css_selector('li.nav-item')
 
-        assert self.driver.find_element_by_xpath("//a[normalize-space()='A1']")
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
+        )
