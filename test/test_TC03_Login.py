@@ -31,7 +31,7 @@ class TestLoginConduit(object):
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
 
         element = WebDriverWait(
-            self.driver, 5).until(
+            self.driver, 15).until(
             EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button"))).click()
 
         assert element

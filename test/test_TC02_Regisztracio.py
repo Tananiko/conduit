@@ -38,9 +38,14 @@ class TestRegistrationConduit(object):
         element = WebDriverWait(
             self.driver, 15).until(
             EC.visibility_of_element_located((By.XPATH, "//button[normalize-space()='OK']"))
-
         )
 
-        self.driver.find_element_by_xpath("//div[@class='swal-title']").text == "Welcome!"
+
+        self.driver.find_element_by_css_selector('.swal-title').text == "Welcome!"
         self.driver.find_element_by_css_selector('.swal-button.swal-button--confirm').click()
-        self.driver.find_element_by_css_selector("nav[class='navbar navbar-light'] li:nth-child(4)").text == "A1"
+        self.driver.find_elements_by_css_selector('li.nav-item')
+
+        element = WebDriverWait(
+            self.driver, 15).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[normalize-space()='A1']"))
+        )
