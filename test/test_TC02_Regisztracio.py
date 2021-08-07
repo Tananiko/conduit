@@ -41,7 +41,7 @@ class TestRegistrationConduit(object):
         )
 
 
-        welcome = self.driver.find_element(By.CSS_SELECTOR(".swal-title"))
+        welcome = self.driver.find_element_by_xpath("//div[@class= 'swal-text']")
         assert welcome.text == "Welcome!"
         self.driver.find_element(By.CSS_SELECTOR('.swal-button.swal-button--confirm')).click()
         self.driver.find_elements(By.CSS_SELECTOR('li.nav-item'))
