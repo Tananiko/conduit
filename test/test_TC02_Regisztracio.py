@@ -41,10 +41,10 @@ class TestRegistrationConduit(object):
         )
 
 
-        welcome = self.driver.find_element(by=By.CSS_SELECTOR (".swal-title"))
+        welcome = self.driver.find_element(By.CSS_SELECTOR (".swal-title"))
         assert welcome.text == "Welcome!"
-        self.driver.find_element(by=By.CSS_SELECTOR ('.swal-button.swal-button--confirm').click())
-        self.driver.find_elements(by=By.CSS_SELECTOR ('li.nav-item'))
+        self.driver.find_element(By.CSS_SELECTOR ('.swal-button.swal-button--confirm').click())
+        self.driver.find_elements(By.CSS_SELECTOR ('li.nav-item'))
 
         # WebDriverWait(
         #    self.driver, 50).until(
