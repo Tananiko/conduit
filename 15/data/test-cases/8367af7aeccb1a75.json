@@ -1,0 +1,86 @@
+{
+  "uid" : "8367af7aeccb1a75",
+  "name" : "test_registration",
+  "fullName" : "test.test_TC02_Regisztracio.TestRegistrationConduit#test_registration",
+  "historyId" : "bb6b4ffb1236d9fc1c2dd35ceb784dcc",
+  "time" : {
+    "start" : 1628337001057,
+    "stop" : 1628337002872,
+    "duration" : 1815
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'Registration failed!' == 'Welcome!'\n  - Welcome!\n  + Registration failed!",
+  "statusTrace" : "self = <test_TC02_Regisztracio.TestRegistrationConduit object at 0x7fbb5c184340>\n\n    def test_registration(self):\n    \n        self.driver.find_element_by_xpath('//a[contains(text(),\"Sign up\")]').click()\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Username\"]').send_keys(\"A1\")\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Email\"]').send_keys(\"Aniko@gmail.com\")\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Password\"]').send_keys(\"Tananiko-1\")\n        self.driver.find_element_by_xpath('//form/button').click()\n    \n        element = WebDriverWait(\n            self.driver, 10).until(\n            EC.visibility_of_element_located((By.XPATH, \"/html/body/div[2]/div/div[4]/div/button\"))\n    \n        )\n>       assert self.driver.find_element_by_css_selector(\".swal-title\").text == \"Welcome!\"\nE       AssertionError: assert 'Registration failed!' == 'Welcome!'\nE         - Welcome!\nE         + Registration failed!\n\ntest/test_TC02_Regisztracio.py:44: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 'Registration failed!' == 'Welcome!'\n  - Welcome!\n  + Registration failed!",
+    "statusTrace" : "self = <test_TC02_Regisztracio.TestRegistrationConduit object at 0x7fbb5c184340>\n\n    def test_registration(self):\n    \n        self.driver.find_element_by_xpath('//a[contains(text(),\"Sign up\")]').click()\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Username\"]').send_keys(\"A1\")\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Email\"]').send_keys(\"Aniko@gmail.com\")\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Password\"]').send_keys(\"Tananiko-1\")\n        self.driver.find_element_by_xpath('//form/button').click()\n    \n        element = WebDriverWait(\n            self.driver, 10).until(\n            EC.visibility_of_element_located((By.XPATH, \"/html/body/div[2]/div/div[4]/div/button\"))\n    \n        )\n>       assert self.driver.find_element_by_css_selector(\".swal-title\").text == \"Welcome!\"\nE       AssertionError: assert 'Registration failed!' == 'Welcome!'\nE         - Welcome!\nE         + Registration failed!\n\ntest/test_TC02_Regisztracio.py:44: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1ab0f688bf89eb1e",
+      "name" : "log",
+      "source" : "1ab0f688bf89eb1e.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "2c38098dcbcb931e",
+      "name" : "stderr",
+      "source" : "2c38098dcbcb931e.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC02_Regisztracio"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegistrationConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-224"
+  }, {
+    "name" : "thread",
+    "value" : "3819-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC02_Regisztracio"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8367af7aeccb1a75.json",
+  "parameterValues" : [ ]
+}
