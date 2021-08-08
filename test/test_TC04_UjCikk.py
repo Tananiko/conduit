@@ -53,7 +53,7 @@ class TestNewBlogPost(object):
 
         WebDriverWait(
             self.driver, 50).until(
-            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Blog']"))
+            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Recipe']"))
         )
 
         article_appearance =  self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')

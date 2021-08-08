@@ -10,7 +10,7 @@ import random
 import string
 from selenium.webdriver.common.keys import Keys
 
-class TestEditBlogPost(object):
+class TestDeleteBlogPost(object):
 
     def setup(self):
         browser_options = Options()
@@ -39,11 +39,10 @@ class TestEditBlogPost(object):
             EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
         )
     def test_create_new_article(self):
-        # login_to_conduit(self.driver)
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Vanilla")
+        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Chilli con Carne")
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
                                           ).send.keys(self.rand_string)
         self.driver.find_element_by_xpath('//input[@placeholder="Write your article (in markdown)"]'
@@ -53,28 +52,23 @@ class TestEditBlogPost(object):
 
         WebDriverWait(
             self.driver, 50).until(
-            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Blog']"))
+            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Chilli con Carne']"))
         )
 
         article_appearance = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
-        assert article_appearance == "Vanilla"
+        assert article_appearance == "Recipe"
 
-    def test_edit_own_article(self):
+    def test_delete_own_article(self):
 
-        self.driver.find_elements_by_xpaths('//*[@id="article-meta"]/div/div[1]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').clear()
-        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Vanilla Updated")
-        self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
-                                          ).clear()
-        self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
-                                          ).clear().send.keys(self.rand_string)
-        self.driver.find_element_by_xpath('//input[@placeholder="Write your article (in markdown)"]'
-                                          ).clear().send_keys(self.rand_string)
-        self.driver.find_element_by_xpath('//form/button').click()
+        self.driver.find_elements_by_xpaths("//button[@class='btn btn-outline-danger btn-sm']//span[1]").click()
 
-        element = WebDriverWait(
+        WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/div/div[1]/div/h1'))
         )
-        edited_article_appearance = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
-        assert edited_article_appearance == "Vanilla Updated"
+
+        self.driver.find_element_by_link_text("http://conduitapp.progmasters.hu:1667/#/articles/")
+        WebDriverWait(
+            self.driver, 25)
+
+        assert self.driver.find_element_by_xpath("//p[normalize-space()='Page Not Found']")
