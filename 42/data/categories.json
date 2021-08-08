@@ -1,0 +1,107 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'Email already taken.' == 'Your registr...s successful!'\n  - Your registration was successful!\n  + Email already taken.",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "24ab2bfdc30e070c",
+        "parentUid" : "16e8fa11192c58bc179da6f3c02e81a2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628412906039,
+          "stop" : 1628412907793,
+          "duration" : 1754
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "16e8fa11192c58bc179da6f3c02e81a2"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/editor\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "19318e4a2f063f4d",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628412930586,
+          "stop" : 1628412930604,
+          "duration" : 18
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_new_article",
+        "uid" : "4b72992667d11439",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628412940670,
+          "stop" : 1628412940688,
+          "duration" : 18
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_new_article",
+        "uid" : "9f3a6b77f529b252",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628412953352,
+          "stop" : 1628412953371,
+          "duration" : 19
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c110f16dd600ea72bf75233ea3dd0e70"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder=\"Write a comment...\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_comment_upload_from_file",
+        "uid" : "22870cb5a92036b3",
+        "parentUid" : "b25d6fb91fc563b90ca2a4f96a96049f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628412943276,
+          "stop" : 1628412943296,
+          "duration" : 20
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b25d6fb91fc563b90ca2a4f96a96049f"
+    }, {
+      "name" : "AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'",
+      "children" : [ {
+        "name" : "test_edit_own_article",
+        "uid" : "1668f668122e6a1",
+        "parentUid" : "24b8d1042eeefab401cd15189db239e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628412955902,
+          "stop" : 1628412955902,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "24b8d1042eeefab401cd15189db239e3"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
