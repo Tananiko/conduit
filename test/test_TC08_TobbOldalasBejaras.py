@@ -38,6 +38,11 @@ class TestPaginationConduit(object):
         )
 
     def test_pagination(self):
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "page-link"))
+        )
+
         pagination = self.driver.find_element_by_class_name("page-link")
         WebDriverWait(
             self.driver, 50)

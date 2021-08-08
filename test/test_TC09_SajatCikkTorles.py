@@ -41,7 +41,7 @@ class TestDeleteBlogPost(object):
     def test_create_new_article(self):
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
-        self.driver.find_element_by_xpath("//a[@class='nav-link router-link-exact-active active']").click()
+        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
         WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
@@ -67,12 +67,15 @@ class TestDeleteBlogPost(object):
         )
 
         article_appearance = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
-        assert article_appearance == "Recipe"
+        assert article_appearance == "Chilli con Carne"
         WebDriverWait(
             self.driver, 50)
 
     def test_delete_own_article(self):
-
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.XPATH, "//button[@class='btn btn-outline-danger btn-sm']//span[1]"))
+        )
         self.driver.find_elements_by_xpaths("//button[@class='btn btn-outline-danger btn-sm']//span[1]").click()
 
         WebDriverWait(

@@ -43,7 +43,7 @@ class TestLogoutConduit(object):
 
         WebDriverWait(
             self.driver, 50).until(
-            EC.visibility_of_elements_located((By.CSS_SELECTOR, 'a.nav-link'))
+            EC.visibility_of_element_located((By.XPATH, "//a[@active-class='active']"))
         )
         nav_list[4].click()
         WebDriverWait(
@@ -55,7 +55,7 @@ class TestLogoutConduit(object):
         assert logged_out_site1 == "Sign in"
         WebDriverWait(
             self.driver,50)
-        logged_out_site2 = nav_items[-1].text
+        logged_out_site2 = nav_items[2].text
         assert logged_out_site2 == "Sign up"
         WebDriverWait(
             self.driver, 50)

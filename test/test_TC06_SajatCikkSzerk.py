@@ -42,12 +42,18 @@ class TestEditBlogPost(object):
         # login_to_conduit(self.driver)
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
+        )
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+
         WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
         )
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Vanilla")
+
         WebDriverWait(
             self.driver, 50)
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
@@ -65,15 +71,15 @@ class TestEditBlogPost(object):
 
         WebDriverWait(
             self.driver, 50).until(
-            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Blog']"))
-        )
+            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Vanilla']"))
+              )
 
-        article_appearance = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
+        article_appearance = self.driver.find_element_by_xpath("//h1[normalize-space()='Vanilla']")
         assert article_appearance == "Vanilla"
 
     def test_edit_own_article(self):
 
-        self.driver.find_elements_by_xpaths("//a[@class='btn btn-sm btn-outline-secondary']//span[1]").click()
+        self.driver.find_element_by_xpath("//a[@class='btn btn-sm btn-outline-secondary']//span[1]").click()
         WebDriverWait(
             self.driver, 50)
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').clear()

@@ -41,7 +41,11 @@ class TestFileUpload(object):
         )
     def test_create_new_article(self):
         self.rand_string = 'Apple'.join(random.choices(string.ascii_uppercase + string.digits, k=8))
-        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+        self.driver.find_element_by_xpath('//a[@href="#/editor"]')
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
+        ).click()
 
         WebDriverWait(
             self.driver, 50).until(
@@ -67,12 +71,11 @@ class TestFileUpload(object):
     def test_create_comment_upload_from_file(self):
 
         self.driver.find_element_by_xpath('//input[@placeholder="Write a comment..."]')
-
         WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Write a comment..."]'))
         )
-        with open('data.csv', 'r', encoding="utf-8") as csvfile:
+        with open('../data.csv', 'r', encoding="utf-8") as csvfile:
             csv_reader = (csvfile)
             next(csv_reader)
             for row in csv_reader:
