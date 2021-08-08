@@ -10,7 +10,7 @@ import random
 import string
 from selenium.webdriver.common.keys import Keys
 
-class TestNewBLogPost(object):
+class TestEditBlogPost(object):
 
     def setup(self):
         browser_options = Options()
