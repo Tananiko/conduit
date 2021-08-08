@@ -58,4 +58,3 @@ class TestNewBLogPost(object):
 
         article_appearance =  self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
         assert article_appearance == "Recipe"
-
