@@ -1,0 +1,86 @@
+{
+  "uid" : "265258c735eb8ebd",
+  "name" : "test_create_new_article",
+  "fullName" : "test.test_TC04_UjCikk.TestNewBlogPost#test_create_new_article",
+  "historyId" : "34cb1f672fb095f63ae4a2168d656df2",
+  "time" : {
+    "start" : 1628445183267,
+    "stop" : 1628445183279,
+    "duration" : 12
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+  "statusTrace" : "self = <test_TC04_UjCikk.TestNewBlogPost object at 0x7f0395d26160>\n\n    def test_create_new_article(self):\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n>       self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC04_UjCikk.py:44: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+    "statusTrace" : "self = <test_TC04_UjCikk.TestNewBlogPost object at 0x7f0395d26160>\n\n    def test_create_new_article(self):\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n>       self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC04_UjCikk.py:44: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d8df34cf704db5bc",
+      "name" : "log",
+      "source" : "d8df34cf704db5bc.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "1058966d080bb556",
+      "name" : "stderr",
+      "source" : "1058966d080bb556.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC04_UjCikk"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewBlogPost"
+  }, {
+    "name" : "host",
+    "value" : "fv-az82-623"
+  }, {
+    "name" : "thread",
+    "value" : "3703-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC04_UjCikk"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "265258c735eb8ebd.json",
+  "parameterValues" : [ ]
+}
