@@ -61,6 +61,7 @@ class Datadownload(object):
             csv_writer = (csvfile)
             next(csv_writer)
             csv_writer.write(list)
+
         for row in csv_writer:
             self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[0])
             self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[1])
