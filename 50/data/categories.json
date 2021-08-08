@@ -1,0 +1,154 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[href='#/editor']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "48c737ba21ee9a23",
+        "parentUid" : "264e67c90640c66f1b43d24ee5fcad42",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439426200,
+          "stop" : 1628439426212,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "264e67c90640c66f1b43d24ee5fcad42"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/editor\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "a496210b355b6d6e",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439434914,
+          "stop" : 1628439434927,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_new_article",
+        "uid" : "1f0de3ad1f0d470d",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439445080,
+          "stop" : 1628439445094,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c110f16dd600ea72bf75233ea3dd0e70"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder=\"Write a comment...\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_comment_upload_from_file",
+        "uid" : "53da433f255e7fc9",
+        "parentUid" : "b25d6fb91fc563b90ca2a4f96a96049f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439436382,
+          "stop" : 1628439436397,
+          "duration" : 15
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b25d6fb91fc563b90ca2a4f96a96049f"
+    }, {
+      "name" : "AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'",
+      "children" : [ {
+        "name" : "test_edit_own_article",
+        "uid" : "cce2a23bce1e75af",
+        "parentUid" : "24b8d1042eeefab401cd15189db239e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439446532,
+          "stop" : 1628439446533,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_own_article",
+        "uid" : "3971d4081e7d5bb2",
+        "parentUid" : "24b8d1042eeefab401cd15189db239e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439516446,
+          "stop" : 1628439516446,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "24b8d1042eeefab401cd15189db239e3"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "3f9f3a3d16fbd67d",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439455176,
+          "stop" : 1628439455188,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "7d172e4ccf4c9e06",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439464887,
+          "stop" : 1628439515016,
+          "duration" : 50129
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "AttributeError: module 'selenium.webdriver.support.expected_conditions' has no attribute 'visibility_of_elements_located'",
+      "children" : [ {
+        "name" : "test_navigate_to_logout",
+        "uid" : "57b0f4379723b669",
+        "parentUid" : "3c39b92ec8a22469721fbc763fb81f03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628439526100,
+          "stop" : 1628439526110,
+          "duration" : 10
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3c39b92ec8a22469721fbc763fb81f03"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
