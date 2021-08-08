@@ -40,10 +40,15 @@ class Datadownload(object):
         )
 
     def test_profile_settings(self):
-        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//a[contains(text(),"URL of profile picture")]')
-        self.driver.find_element_by_xpath('//a[contains(text(),"Short bio about you")]')
-        self.driver.find_element_by_xpath('//a[contains(text(),"Email")]')
+        self.driver.find_element_by_xpath("//a[contains(text(),'Settings']").click()
+        self.driver.find_element_by_xpath("//input[@placeholder='Your username']")
+        self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']")
+        self.driver.find_element_by_xpath("//input[@placeholder='Email']")
+
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
+        )
 
         list = ['URL of profile picture', 'Short bio about you', 'Email']
         for i in list:
@@ -52,6 +57,11 @@ class Datadownload(object):
             assert element
         self.driver.save_screenshot('ss_profile.png')
 
-    with open('profile.csv', 'w', encoding="utf-8", newline='') as file:
-        writer = csv.writer(file, quotechar='*')
-        writer.write(list)
+        with open('profile.csv', 'w', encoding="utf-8", newline='', quotechar='*') as csvfile:
+            csv_writer = (csvfile)
+            next(csv_writer)
+            csv_writer.write(list)
+        for row in csv_writer:
+            self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[0])
+            self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[1])
+            self.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys(row[2])
