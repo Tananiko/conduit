@@ -70,10 +70,10 @@ class TestFileUpload(object):
 
     def test_create_comment_upload_from_file(self):
 
-        self.driver.find_element_by_xpath('//input[@placeholder="Write a comment..."]')
+        self.driver.find_element_by_xpath("//textarea[@placeholder='Write a comment...']")
         WebDriverWait(
             self.driver, 50).until(
-            EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Write a comment..."]'))
+            EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
         )
         with open('../data.csv', 'r', encoding="utf-8") as csvfile:
             csv_reader = (csvfile)

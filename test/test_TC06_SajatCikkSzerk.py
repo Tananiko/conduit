@@ -42,16 +42,13 @@ class TestEditBlogPost(object):
         # login_to_conduit(self.driver)
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
-        )
-        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+        self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()
 
         WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
         )
+
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Vanilla")
 
         WebDriverWait(

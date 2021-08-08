@@ -39,8 +39,7 @@ class TestLogoutConduit(object):
 
     def test_navigate_to_logout(self):
 
-        nav_list = self.driver.find_elements_by_css_selector('a.nav-link')\
-
+        nav_list = self.driver.find_elements_by_css_selector('a.nav-link')
         WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, "//a[@active-class='active']"))

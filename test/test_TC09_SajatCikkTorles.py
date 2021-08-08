@@ -41,7 +41,10 @@ class TestDeleteBlogPost(object):
     def test_create_new_article(self):
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
-        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
+
+        self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()
+
         WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
