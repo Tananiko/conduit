@@ -41,7 +41,7 @@ class TestFileUpload(object):
         )
     def test_create_new_article(self):
         self.rand_string = 'Apple'.join(random.choices(string.ascii_uppercase + string.digits, k=8))
-        self.driver.find_element_by_xpath('//a[contains(text(),"New Article")]').click()
+        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Apple")
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
                                           ).send.keys(self.rand_string)
@@ -61,11 +61,11 @@ class TestFileUpload(object):
 
         self.driver.find_element_by_xpath('//input[@placeholder="Write a comment..."]')
 
-        with open('data.csv') as csvfile:
-            csvreader = (csvfile)
-            next(csvreader)
-            for row in csvreader:
-                self.driver.find_element_by_xpath('//input[@placeholder="Write a comment..."]').send_keys(row[0])
+        with open('data.csv', 'r', encoding="utf-8") as csvfile:
+            csv_reader = (csvfile)
+            next(csv_reader)
+            for row in csv_reader:
+                self.driver.find_element_by_xpath('//textarea[@placeholder="Write a comment..."]').send_keys(row[0])
                 self.driver.find_element_by_xpath('//form/button').click()
 
         WebDriverWait(
