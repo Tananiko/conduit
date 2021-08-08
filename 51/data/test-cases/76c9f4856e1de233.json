@@ -1,0 +1,78 @@
+{
+  "uid" : "76c9f4856e1de233",
+  "name" : "test_website",
+  "fullName" : "test.test_TC06_SajatCikkSzerk.TestEditBlogPost#test_website",
+  "historyId" : "c1baab554a9d3b04e3de3828236aee29",
+  "time" : {
+    "start" : 1628443014923,
+    "stop" : 1628443017060,
+    "duration" : 2137
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "7b4c74ebd34f8221",
+      "name" : "log",
+      "source" : "7b4c74ebd34f8221.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "9dbf656b4595c55f",
+      "name" : "stderr",
+      "source" : "9dbf656b4595c55f.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditBlogPost"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-224"
+  }, {
+    "name" : "thread",
+    "value" : "3803-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "76c9f4856e1de233.json",
+  "parameterValues" : [ ]
+}

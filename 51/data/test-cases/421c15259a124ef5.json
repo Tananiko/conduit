@@ -1,0 +1,86 @@
+{
+  "uid" : "421c15259a124ef5",
+  "name" : "test_create_new_article",
+  "fullName" : "test.test_TC06_SajatCikkSzerk.TestEditBlogPost#test_create_new_article",
+  "historyId" : "84ff1479490bca649770b2402589696e",
+  "time" : {
+    "start" : 1628443023292,
+    "stop" : 1628443073687,
+    "duration" : 50395
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <test_TC06_SajatCikkSzerk.TestEditBlogPost object at 0x7f8231b190d0>\n\n    def test_create_new_article(self):\n        # login_to_conduit(self.driver)\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n>       WebDriverWait(\n            self.driver, 50).until(\n            EC.visibility_of_element_located((By.XPATH, '//a[@href=\"#/editor\"]'))\n        )\n\ntest/test_TC06_SajatCikkSzerk.py:45: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"fb55b87c96ad20c0e9110083f6e0ff44\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7f8231b244f0>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/support/wait.py:80: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <test_TC06_SajatCikkSzerk.TestEditBlogPost object at 0x7f8231b190d0>\n\n    def test_create_new_article(self):\n        # login_to_conduit(self.driver)\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n>       WebDriverWait(\n            self.driver, 50).until(\n            EC.visibility_of_element_located((By.XPATH, '//a[@href=\"#/editor\"]'))\n        )\n\ntest/test_TC06_SajatCikkSzerk.py:45: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"fb55b87c96ad20c0e9110083f6e0ff44\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7f8231b244f0>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/support/wait.py:80: TimeoutException",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6e09f02906b8d1e9",
+      "name" : "log",
+      "source" : "6e09f02906b8d1e9.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "74ecf55c906fc12d",
+      "name" : "stderr",
+      "source" : "74ecf55c906fc12d.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditBlogPost"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-224"
+  }, {
+    "name" : "thread",
+    "value" : "3803-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "421c15259a124ef5.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,86 @@
+{
+  "uid" : "e609ba0a4e2abef5",
+  "name" : "test_pagination",
+  "fullName" : "test.test_TC08_TobbOldalasBejaras.TestPaginationConduit#test_pagination",
+  "historyId" : "c9986c5d034fd40943033a85c14ea73b",
+  "time" : {
+    "start" : 1628443084987,
+    "stop" : 1628443135349,
+    "duration" : 50362
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <test_TC08_TobbOldalasBejaras.TestPaginationConduit object at 0x7f8231ad5d00>\n\n    def test_pagination(self):\n>       WebDriverWait(\n            self.driver, 50).until(\n            EC.visibility_of_element_located((By.CLASS_NAME, \"page-link\"))\n        )\n\ntest/test_TC08_TobbOldalasBejaras.py:41: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"6d17386dbd34f696e683ee184e3d1716\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7f8231b638e0>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/support/wait.py:80: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <test_TC08_TobbOldalasBejaras.TestPaginationConduit object at 0x7f8231ad5d00>\n\n    def test_pagination(self):\n>       WebDriverWait(\n            self.driver, 50).until(\n            EC.visibility_of_element_located((By.CLASS_NAME, \"page-link\"))\n        )\n\ntest/test_TC08_TobbOldalasBejaras.py:41: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"6d17386dbd34f696e683ee184e3d1716\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x7f8231b638e0>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/selenium/webdriver/support/wait.py:80: TimeoutException",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1dba1a76bcf84ba5",
+      "name" : "log",
+      "source" : "1dba1a76bcf84ba5.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "2d697fd07efac448",
+      "name" : "stderr",
+      "source" : "2d697fd07efac448.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC08_TobbOldalasBejaras"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPaginationConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-224"
+  }, {
+    "name" : "thread",
+    "value" : "3803-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC08_TobbOldalasBejaras"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e609ba0a4e2abef5.json",
+  "parameterValues" : [ ]
+}
