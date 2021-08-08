@@ -39,17 +39,25 @@ class TestLogoutConduit(object):
 
     def test_navigate_to_logout(self):
 
-        self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
+        nav_list = self.driver.find_elements_by_css_selector('a.nav-link')\
 
         WebDriverWait(
             self.driver, 50).until(
-            EC.visibility_of_elements_located((By.XPATH, '//*[@id="app"]/nav/div/ul/li[5]/a')).click()
+            EC.visibility_of_elements_located((By.CSS_SELECTOR, 'a.nav-link'))
         )
-
+        nav_list[4].click()
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_elements_located((By.CSS_SELECTOR, 'li.nav-item'))
+        )
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
         logged_out_site1 = nav_items[1].text
         assert logged_out_site1 == "Sign in"
+        WebDriverWait(
+            self.driver,50)
         logged_out_site2 = nav_items[-1].text
         assert logged_out_site2 == "Sign up"
+        WebDriverWait(
+            self.driver, 50)
 
 

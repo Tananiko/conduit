@@ -39,11 +39,15 @@ class TestPaginationConduit(object):
 
     def test_pagination(self):
         pagination = self.driver.find_element_by_class_name("page-link")
+        WebDriverWait(
+            self.driver, 50)
         max_pagination = pagination[-1].text
         assert (len(max_pagination) > 0)
+        WebDriverWait(
+            self.driver, 50)
         for page in pagination:
             page.click()
-            WebDriverWait(self.driver, 25)
+        WebDriverWait(self.driver, 50)
         assert len(pagination) == int(max_pagination)
-
+        WebDriverWait(self.driver, 50)
 

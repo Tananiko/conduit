@@ -43,12 +43,24 @@ class TestEditBlogPost(object):
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
+        )
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Vanilla")
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
                                           ).send.keys(self.rand_string)
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//input[@placeholder="Write your article (in markdown)"]'
                                           ).send_keys(self.rand_string)
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//input[@placeholder="Enter tags"]').send_keys('Spice' + Keys.TAB)
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//form/button').click()
 
         WebDriverWait(
@@ -61,18 +73,26 @@ class TestEditBlogPost(object):
 
     def test_edit_own_article(self):
 
-        self.driver.find_elements_by_xpaths('//*[@id="article-meta"]/div/div[1]').click()
+        self.driver.find_elements_by_xpaths("//a[@class='btn btn-sm btn-outline-secondary']//span[1]").click()
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').clear()
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Vanilla Updated")
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
                                           ).clear()
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
                                           ).clear().send.keys(self.rand_string)
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//input[@placeholder="Write your article (in markdown)"]'
                                           ).clear().send_keys(self.rand_string)
+        WebDriverWait(
+            self.driver, 50)
         self.driver.find_element_by_xpath('//form/button').click()
 
-        element = WebDriverWait(
+        WebDriverWait(
             self.driver, 50).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/div/div[1]/div/h1'))
         )

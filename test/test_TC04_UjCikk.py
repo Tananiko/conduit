@@ -39,10 +39,13 @@ class TestNewBlogPost(object):
             EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
         )
     def test_create_new_article(self):
-        # login_to_conduit(self.driver)
 
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
-        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+        self.driver.find_element_by_css_selector("[href='#/editor']").click()
+        WebDriverWait(
+            self.driver, 50).until(
+            EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
+        )
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Recipe")
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
                                           ).send.keys(self.rand_string)
