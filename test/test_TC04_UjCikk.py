@@ -41,8 +41,12 @@ class TestNewBlogPost(object):
     #     )
     def test_create_new_article(self):
         conduit_login(self.driver)
-
         self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
+        WebDriverWait(
+            self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[@href='#/editor']"))
+        )
+
         self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
 
         WebDriverWait(
