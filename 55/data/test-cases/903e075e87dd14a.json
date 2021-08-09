@@ -1,0 +1,86 @@
+{
+  "uid" : "903e075e87dd14a",
+  "name" : "test_create_new_article",
+  "fullName" : "test.test_TC09_SajatCikkTorles.TestDeleteBlogPost#test_create_new_article",
+  "historyId" : "e6fa1617fa308d8504f72e22cbaf291a",
+  "time" : {
+    "start" : 1628536265226,
+    "stop" : 1628536265246,
+    "duration" : 20
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+  "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestDeleteBlogPost object at 0x7fe2359341c0>\n\n    def test_create_new_article(self):\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n    \n>       self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC09_SajatCikkTorles.py:46: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+    "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestDeleteBlogPost object at 0x7fe2359341c0>\n\n    def test_create_new_article(self):\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n    \n>       self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC09_SajatCikkTorles.py:46: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2441452fe0d78175",
+      "name" : "log",
+      "source" : "2441452fe0d78175.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "81bd4f5e8311ee5f",
+      "name" : "stderr",
+      "source" : "81bd4f5e8311ee5f.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDeleteBlogPost"
+  }, {
+    "name" : "host",
+    "value" : "fv-az47-991"
+  }, {
+    "name" : "thread",
+    "value" : "3800-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "903e075e87dd14a.json",
+  "parameterValues" : [ ]
+}
