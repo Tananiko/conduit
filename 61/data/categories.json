@@ -1,0 +1,179 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'Email already taken.' == 'Your registr...s successful!'\n  - Your registration was successful!\n  + Email already taken.",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "b5a7f63bf6974d19",
+        "parentUid" : "16e8fa11192c58bc179da6f3c02e81a2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628543121721,
+          "stop" : 1628543123077,
+          "duration" : 1356
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "16e8fa11192c58bc179da6f3c02e81a2"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/editor\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "150d496d003721d6",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543141511,
+          "stop" : 1628543141524,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c110f16dd600ea72bf75233ea3dd0e70"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//textarea[@placeholder='Write a comment...']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_create_comment_upload_from_file",
+        "uid" : "13f0a11cf816e28a",
+        "parentUid" : "a5a1eee2bf4819e95b2f5b90d5cafeb9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543143936,
+          "stop" : 1628543143948,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a5a1eee2bf4819e95b2f5b90d5cafeb9"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/editor']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_profile_settings",
+        "uid" : "c10c71e4047af55b",
+        "parentUid" : "a0087cd691aa890338943397c6b33a89",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543146368,
+          "stop" : 1628543146606,
+          "duration" : 238
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a0087cd691aa890338943397c6b33a89"
+    }, {
+      "name" : "AttributeError: 'list' object has no attribute 'click'",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "cd3996565ec9d87d",
+        "parentUid" : "13042c33fb6140e3ed0a430b874b43b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543155251,
+          "stop" : 1628543155262,
+          "duration" : 11
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_new_article",
+        "uid" : "5860b3393c8c39af",
+        "parentUid" : "13042c33fb6140e3ed0a430b874b43b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543175000,
+          "stop" : 1628543175010,
+          "duration" : 10
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "13042c33fb6140e3ed0a430b874b43b8"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_edit_own_article",
+        "uid" : "a4e493639884c6c3",
+        "parentUid" : "aaf24028905bd138f73ea0a992176443",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543156681,
+          "stop" : 1628543156695,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "aaf24028905bd138f73ea0a992176443"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "a5399ef41fcf554d",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543166353,
+          "stop" : 1628543166365,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "test_delete_own_article",
+        "uid" : "999c93ff24eab014",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543176412,
+          "stop" : 1628543226458,
+          "duration" : 50046
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "IndexError: list index out of range",
+      "children" : [ {
+        "name" : "test_navigate_to_logout",
+        "uid" : "43f005ff320ec41f",
+        "parentUid" : "cbf21ee610ffd376e0ce643a364ade80",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628543228859,
+          "stop" : 1628543230123,
+          "duration" : 1264
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cbf21ee610ffd376e0ce643a364ade80"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
