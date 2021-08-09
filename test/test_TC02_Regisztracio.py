@@ -28,7 +28,7 @@ class TestRegistrationConduit(object):
         email = 'A'.join((secrets.choice(alphabet) for i in range(5))).join("@gmail.com")
         self.driver.find_element_by_xpath('/html/body//a[contains(@href,"register")]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A11")
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("A1111@gmail.com")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("A11111@gmail.com")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-11")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 

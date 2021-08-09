@@ -41,7 +41,6 @@ class TestNewBlogPost(object):
     #     )
     def test_create_new_article(self):
         conduit_login(self.driver)
-        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))
         WebDriverWait(
             self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//a[@href='#/editor']"))
@@ -54,17 +53,15 @@ class TestNewBlogPost(object):
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
         )
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Recipe")
-        self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
-                                          ).send.keys(self.rand_string)
-        self.driver.find_element_by_xpath('//input[@placeholder="Write your article (in markdown)"]'
-                                          ).send_keys("Recipe, more recipe")
-        self.driver.find_element_by_xpath('//input[@placeholder="Enter tags"]').send_keys('Spice' + Keys.TAB)
-        self.driver.find_element_by_xpath('//form/button').click()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send.keys("Recipe")
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys("Recipe, more recipe")
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys('Spice' + Keys.TAB)
+        self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
 
         WebDriverWait(
             self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Recipe']"))
         )
 
-        article_appearance = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
+        article_appearance = self.driver.find_element_by_xpath("h1")
         assert article_appearance == "Recipe"
