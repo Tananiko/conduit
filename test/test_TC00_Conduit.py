@@ -1,6 +1,10 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import time
 
 
 class TestConduit(object):
@@ -20,13 +24,20 @@ class TestConduit(object):
             '//a[@class="navbar-brand router-link-exact-active router-link-active"]').text == "conduit"
 
     def test_website(self):
-        # self.driver.maximize_window()
+
         self.driver.find_elements_by_link_text('Home')
         self.driver.find_elements_by_link_text('Sign in')
         self.driver.find_elements_by_link_text('Sign up')
         self.driver.find_element_by_link_text('Global Feed')
 
+        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
+        logged_out_site1 = nav_items[1].text
+        assert logged_out_site1 == "Sign in"
+        WebDriverWait(self.driver, 10)
 
+        logged_out_site2 = nav_items[2].text
+        assert logged_out_site2 == "Sign up"
+        WebDriverWait(self.driver, 10)
 
 
 
