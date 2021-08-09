@@ -25,12 +25,16 @@ class TestEditProfile(object):
 
     def test_profile_settings(self):
         conduit_login(self.driver)
-        profile_picture = self.driver.find_element_by_xpath("//input[@placeholder='URL of profile picture']")
+        settings = self.driver.find_element_by_xpath('//a[@href="#/settings"]')
+        settings.click()
+        profile_picture = self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]')
         assert profile_picture == 'https://static.productionready.io/images/smiley-cyrus.jpg'
         reg_name = self.driver.find_element_by_xpath("//input[@placeholder='Your username']")
         assert reg_name == "A1"
         bio = self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']")
         bio.send_keys("Updated bio about")
+        update_button = self.driver.find_element_by_xpath('//button[@class="btn btn-lg btn-primary pull-xs-right"]')
+        update_button.click()
         updated_success = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
         updated_success.text == "Update successful!"
         ok_button = self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]')
