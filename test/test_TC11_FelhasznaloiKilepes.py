@@ -30,22 +30,14 @@ class TestLogoutConduit(object):
 
         nav_list = self.driver.find_elements_by_css_selector('a.nav-link')
         WebDriverWait(
-            self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "//a[@active-class='active']"))
-        )
-        nav_list[4].click()
+            self.driver, 10)
+        logout_button = self.driver.find_element_by_xpath("//a[@active-class='active']")
+        logout_button.click()
         WebDriverWait(
             self.driver, 10).until(
             EC.visibility_of_elements_located((By.XPATH, '//a[@href="#/login"]'))
         )
-        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
-        logged_out_site1 = nav_items[1].text
-        assert logged_out_site1 == "Sign in"
-        WebDriverWait(
-            self.driver,50)
-        logged_out_site2 = nav_items[2].text
-        assert logged_out_site2 == "Sign up"
-        WebDriverWait(
-            self.driver, 50)
+        sign_in_button = self.driver.find_elements_by_xpath('//a[@href="#/login"]')
+        assert sign_in_button.is_displayed()
 
 
