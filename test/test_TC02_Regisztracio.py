@@ -20,18 +20,18 @@ class TestRegistrationConduit(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_website(self):
-        self.driver.maximize_window()
-        time.sleep(2)
-        assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
-                                                 ).text == "conduit"
+    # def test_website(self):
+    #     self.driver.maximize_window()
+    #     time.sleep(2)
+    #     assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
+    #                                              ).text == "conduit"
 
 
     def test_registration(self):
 
         self.driver.find_element_by_xpath('/html/body//a[contains(@href,"register")]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("A11")
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko11@gmail.com")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko114@gmail.com")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-11")
         self.driver.find_element_by_xpath('//button[normalize-space()="Sign up"]').click()
 

@@ -19,17 +19,17 @@ class TestCookies(object):
 
     def teardown(self):
         self.driver.quit()
-
-    def test_website(self):
-        self.driver.maximize_window()
-        time.sleep(2)
-        assert self.driver.find_element_by_xpath(
-            '//a[@class="navbar-brand router-link-exact-active router-link-active"]'
-            ).text == "conduit"
+    #
+    # def test_website(self):
+    #     self.driver.maximize_window()
+    #     time.sleep(2)
+    #     assert self.driver.find_element_by_xpath(
+    #         '//a[@class="navbar-brand router-link-exact-active router-link-active"]'
+    #         ).text == "conduit"
 
     def test_accept_cookies(self):
         self.driver.find_element_by_xpath('//*[@id="cookie-policy-panel"]/div/div[2]').click()
 
-
+# assert
 
 
