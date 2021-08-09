@@ -52,10 +52,14 @@ class TestNewBlogPost(object):
             self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
         )
-        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Recipe")
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send.keys("Recipe")
-        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys("Recipe, more recipe")
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys('Spice' + Keys.TAB)
+        title = self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]')
+        title.send_keys("Recipe")
+        about = self.driver.find_element_by_xpath('//input[contains(@placeholder,"What")]')
+        about.send_keys("Spice")
+        article = self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]')
+        article.send_keys("Recipe, more recipe")
+        tag = self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]')
+        tag.send_keys('Spice' + Keys.TAB)
         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
 
         WebDriverWait(
@@ -63,5 +67,5 @@ class TestNewBlogPost(object):
             EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Recipe']"))
         )
 
-        article_appearance = self.driver.find_element_by_xpath("h1")
-        assert article_appearance == "Recipe"
+        article_appearance = self.driver.find_element_by_xpath('//h1')
+        assert article_appearance.text == "Recipe"
