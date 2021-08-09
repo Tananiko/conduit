@@ -4,9 +4,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import datetime
+from datetime import datetime
 import time
+import random
+import string
+from conduit_data import conduit_login
 from selenium.webdriver.common.keys import Keys
+
 
 class TestLogoutConduit(object):
 
@@ -19,35 +23,20 @@ class TestLogoutConduit(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_website(self):
-        self.driver.maximize_window()
-        time.sleep(2)
-        assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
-                                                 ).text == "conduit"
-
-    def test_navigate_to_login(self):
-        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
-        self.driver.find_element_by_xpath("//button[normalize-space()='Sign in']").click()
-        self.driver.find_elements_by_css_selector('li.nav-item')
-
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
-
     def test_navigate_to_logout(self):
+        conduit_login(self.driver)
+        WebDriverWait(
+            self.driver, 25)
 
         nav_list = self.driver.find_elements_by_css_selector('a.nav-link')
         WebDriverWait(
-            self.driver, 50).until(
+            self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//a[@active-class='active']"))
         )
         nav_list[4].click()
         WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_elements_located((By.CSS_SELECTOR, 'li.nav-item'))
+            self.driver, 10).until(
+            EC.visibility_of_elements_located((By.XPATH, '//a[@href="#/login"]'))
         )
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
         logged_out_site1 = nav_items[1].text
