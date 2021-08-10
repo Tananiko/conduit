@@ -21,24 +21,7 @@ class TestNewBlogPost(object):
 
     def teardown(self):
         self.driver.quit()
-    #
-    # def test_website(self):
-    #     self.driver.maximize_window()
-    #     time.sleep(2)
-    #     assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
-    #                                              ).text == "conduit"
-    #
-    # def test_navigate_to_login(self):
-    #     self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-    #     self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
-    #     self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
-    #     self.driver.find_element_by_xpath("//button[normalize-space()='Sign in']").click()
-    #     self.driver.find_elements_by_css_selector('li.nav-item')
-    #
-    #     WebDriverWait(
-    #         self.driver, 50).until(
-    #         EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-    #     )
+
     def test_create_new_article(self):
         conduit_login(self.driver)
         WebDriverWait(

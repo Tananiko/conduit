@@ -25,41 +25,41 @@ class TestFileUpload(object):
     def test_create_new_article(self):
         conduit_login(self.driver)
         WebDriverWait(
-            self.driver, 25)
-
-        self.rand_string = 'Apple'.join(random.choices(string.ascii_uppercase + string.digits, k=8))
-        self.driver.find_element_by_xpath('//a[@href="#/editor"]')
-        WebDriverWait(
-            self.driver, 20).until(
-            EC.visibility_of_element_located((By.XPATH, '//a[@href="#/editor"]'))
-        ).click()
+            self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, "//a[@href='#/editor']"))
+        )
+        self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
 
         WebDriverWait(
-            self.driver, 20).until(
+            self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
         )
-        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys("Apple")
-        self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div/div/form/fieldset/fieldset[2]/input'
-                                          ).send.keys(self.rand_string)
-        self.driver.find_element_by_xpath('//input[@placeholder="Write your article (in markdown)"]'
-                                          ).send_keys(self.rand_string)
-        self.driver.find_element_by_xpath('//form/button').click()
+        title = self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]')
+        title.send_keys("Apple")
+        about = self.driver.find_element_by_xpath('//input[contains(@placeholder,"What")]')
+        about.send_keys("Apple")
+        article = self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]')
+        article.send_keys("Apple has two benefits")
+        tag = self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]')
+        tag.send_keys('Apple' + Keys.TAB)
+        self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
 
         WebDriverWait(
-            self.driver, 20).until(
-            EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/div/div[1]/div/h1'))
+            self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Apple']"))
         )
-        article_appearance = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/h1')
-        assert article_appearance == "Apple"
+
+        article_appearance = self.driver.find_element_by_xpath('//h1')
+        assert article_appearance.text == "Apple"
 
         WebDriverWait(
-            self.driver, 20)
+            self.driver, 30)
 
     def test_create_comment_upload_from_file(self):
 
         self.driver.find_element_by_xpath("//textarea[@placeholder='Write a comment...']")
-        WebDriverWait(
-            self.driver, 10).until(
+        element = WebDriverWait(
+            self.driver, 20).until(
             EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
         )
         with open('data.csv', 'r', encoding="utf-8") as csvfile:

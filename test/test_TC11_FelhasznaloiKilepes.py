@@ -26,17 +26,15 @@ class TestLogoutConduit(object):
     def test_navigate_to_logout(self):
         conduit_login(self.driver)
         WebDriverWait(
-            self.driver, 25)
+            self.driver, 30)
 
         nav_list = self.driver.find_elements_by_css_selector('a.nav-link')
         WebDriverWait(
-            self.driver, 10)
-        logout_button = self.driver.find_element_by_xpath("//a[@active-class='active']")
+            self.driver, 30)
+        logout_button = self.driver.find_element_by_xpath('//a[@active-class="active"]')
         logout_button.click()
         WebDriverWait(
-            self.driver, 10).until(
-            EC.visibility_of_elements_located((By.XPATH, '//a[@href="#/login"]'))
-        )
+            self.driver, 30)
         sign_in_button = self.driver.find_elements_by_xpath('//a[@href="#/login"]')
         assert sign_in_button.is_displayed()
 

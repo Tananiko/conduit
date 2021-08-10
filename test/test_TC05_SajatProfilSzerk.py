@@ -32,7 +32,7 @@ class TestEditProfile(object):
         profile_picture = self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]')
         assert profile_picture == 'https://static.productionready.io/images/smiley-cyrus.jpg'
         profile_picture.clear()
-        profile_picture.send.keys("https://www.shutterstock.com/image-vector/letter-logo-formed-number-one-symbols-1430370398")
+        profile_picture.send.keys("https://static.productionready.io/images/smiley.jpg")
         reg_name = self.driver.find_element_by_xpath("//input[@placeholder='Your username']")
         assert reg_name == "A1"
         bio = self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']")
