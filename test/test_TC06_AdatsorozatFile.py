@@ -35,11 +35,11 @@ class TestFileUpload(object):
             EC.visibility_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))
         )
         title = self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]')
-        title.send_keys("Apple")
+        title.send_keys("Apple has two benefits")
         about = self.driver.find_element_by_xpath('//input[contains(@placeholder,"What")]')
         about.send_keys("Apple")
         article = self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]')
-        article.send_keys("Apple has two benefits")
+        article.send_keys("Apple has two benefits and an apple a day keeps the doctor away")
         tag = self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]')
         tag.send_keys('Apple' + Keys.TAB)
         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
@@ -56,8 +56,7 @@ class TestFileUpload(object):
             self.driver, 30)
 
     def test_create_comment_upload_from_file(self):
-
-        self.driver.find_element_by_xpath("//textarea[@placeholder='Write a comment...']")
+        self.driver.find_element_by_xpath('//h1[text()="Apple has two benefits"]').click()
         element = WebDriverWait(
             self.driver, 20).until(
             EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
