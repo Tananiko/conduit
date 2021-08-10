@@ -31,10 +31,11 @@ class TestEditProfile(object):
         settings.click()
         profile_picture = self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]')
         assert profile_picture == 'https://static.productionready.io/images/smiley-cyrus.jpg'
+        profile_picture.clear()
+        profile_picture.send.keys("https://www.shutterstock.com/image-vector/letter-logo-formed-number-one-symbols-1430370398")
         reg_name = self.driver.find_element_by_xpath("//input[@placeholder='Your username']")
         assert reg_name == "A1"
         bio = self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']")
-        bio.send_keys("Updated bio about")
         update_button = self.driver.find_element_by_xpath('//button[@class="btn btn-lg btn-primary pull-xs-right"]')
         update_button.click()
         WebDriverWait(
