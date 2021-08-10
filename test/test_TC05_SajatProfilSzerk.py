@@ -27,7 +27,7 @@ class TestEditProfile(object):
         conduit_login(self.driver)
         WebDriverWait(
             self.driver, 25)
-        settings = self.driver.find_element_by_xpath("//a[@href='#/editor']")
+        settings = self.driver.find_element_by_xpath("//a[@class='nav-link router-link-exact-active active']")
         settings.click()
         profile_picture = self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]')
         assert profile_picture == 'https://static.productionready.io/images/smiley-cyrus.jpg'
@@ -37,8 +37,10 @@ class TestEditProfile(object):
         bio.send_keys("Updated bio about")
         update_button = self.driver.find_element_by_xpath('//button[@class="btn btn-lg btn-primary pull-xs-right"]')
         update_button.click()
+        WebDriverWait(
+            self.driver, 15)
         updated_success = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
         updated_success.text == "Update successful!"
-        ok_button = self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]')
+        ok_button = self.driver.find_element_by_xpath("//button[normalize-space()='OK']")
         ok_button.click()
 
