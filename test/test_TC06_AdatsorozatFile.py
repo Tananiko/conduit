@@ -1,5 +1,4 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -36,9 +35,9 @@ class TestFileUpload(object):
             EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
             )
 
-        with open('data.csv', 'r', encoding="utf-8") as csvfile:
+        with open('data.csv', 'r') as csvfile:
             csv_reader = csv.reader(csvfile)
-            next(csv.reader)
+            next(csv_reader)
             for row in csv_reader:
                 element.send_keys(row[0])
                 self.driver.find_element_by_xpath("//textarea[@placeholder='Write a comment...']")
