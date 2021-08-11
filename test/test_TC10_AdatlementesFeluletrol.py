@@ -37,7 +37,7 @@ class Datadownload(object):
         self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f"{i.text}")))
         assert element
 
-        with open('profile.csv', 'w',) as csvfile:
+        with open('../profile.csv', 'w', ) as csvfile:
             csv_writer = csv.writer(csvfile)
             next(csv_writer)
             csv_writer.write(list)
@@ -48,7 +48,7 @@ class Datadownload(object):
             self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[2])
             self.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys(row[3])
 
-        with open('profile.csv', 'r',) as csvfile:
+        with open('../profile.csv', 'r', ) as csvfile:
             csv_writer = csv.writer(csvfile)
             first_row = csvfile.readline()
             assert first_row == "https://static.productionready.io/images/smiley-cyrus.jpg"
