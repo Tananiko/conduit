@@ -23,16 +23,11 @@ class TestPaginationConduit(object):
         time.sleep(3)
 
         pagination = self.driver.find_element_by_class_name("page-link")
-        WebDriverWait(
-            self.driver, 30).until(
-            EC.element_to_be_clickable((By.CLASS_NAME, "page-link"))
-        )
-        max_pagination = pagination[-1].text
-        assert (len(max_pagination) > 0)
-        time.sleep(5)
+        time.sleep(3)
+        length = len(pagination)
         for page in pagination:
-            page.click()
-        time.sleep(5)
-        assert len(pagination) == int(max_pagination)
-
+            if page.text != length:
+                page.click()
+            else:
+                assert page.text == length
 
