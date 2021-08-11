@@ -4,9 +4,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import datetime
 import time
-from selenium.webdriver.common.keys import Keys
+from conduit_data import conduit_login
 
 class TestPaginationConduit(object):
 
@@ -19,37 +18,19 @@ class TestPaginationConduit(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_website(self):
-        self.driver.maximize_window()
-        time.sleep(2)
-        assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
-                                                 ).text == "conduit"
-
-    def test_navigate_to_login(self):
-        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
-        self.driver.find_element_by_xpath("//button[normalize-space()='Sign in']").click()
-        self.driver.find_elements_by_css_selector('li.nav-item')
-
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
-
     def test_pagination(self):
+        conduit_login(self.driver)
+        time.sleep(3)
+
         pagination = self.driver.find_element_by_class_name("page-link")
         WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.CLASS_NAME, "page-link"))
+            self.driver, 30).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "page-link"))
         )
-        max_pagination = pagination[-1].text
-        assert (len(max_pagination) > 0)
-        WebDriverWait(
-            self.driver, 50)
+        max_pagination = len(pagination)
         for page in pagination:
-            page.click()
-        WebDriverWait(self.driver, 50)
-        assert len(pagination) == int(max_pagination)
-        WebDriverWait(self.driver, 50)
+            if page.text < max_pagination:
+                    page.click()
+            else:
+                   assert page.text == max_pagination
 
