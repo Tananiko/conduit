@@ -11,7 +11,7 @@ import csv
 from selenium.webdriver.common.keys import Keys
 from conduit_data import conduit_login
 
-class Datadownload(object):
+class TestDatadownload(object):
 
     def setup(self):
         browser_options = Options()
