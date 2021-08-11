@@ -22,7 +22,7 @@ class TestPaginationConduit(object):
         conduit_login(self.driver)
         time.sleep(3)
 
-        pagination = self.driver.find_element_by_class_name("page-link")
+        pagination = self.driver.find_elements_by_class_name("page-link")
         time.sleep(3)
         length = len(pagination)
         for page in pagination:
