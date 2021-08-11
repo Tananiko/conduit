@@ -23,7 +23,7 @@ class TestFileUpload(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_upload_new_article_from_file(self):
+    def test_upload_new_comment_from_file(self):
         conduit_login(self.driver)
         WebDriverWait(
             self.driver, 15).until(
@@ -36,16 +36,17 @@ class TestFileUpload(object):
             EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
             )
         with open('data.csv', 'r', encoding="utf-8") as csvfile:
-            csv_reader = (csvfile)
+            csv_reader = csv.reader
+            next(csv_reader)
             for row in csv_reader:
-                element.send_keys(row)
+                element.send_keys(row[0])
                 self.driver.find_element_by_xpath('//button[text()="Post Comment"]').click()
         WebDriverWait(
             self.driver, 30).until(
-            EC.visibility_of_element_located((By.XPATH, '//p[normalize-space()="Tasty,"]'))
+            EC.visibility_of_element_located((By.XPATH, '//p[@class="Tasty"]'))
         )
         comment = self.driver.find_elements_by_class_name("card-text")
-        last_comment = comment[-1].text
+        last_comment = comment[0].text
         time.sleep(2)
-        assert last_comment.include == "Tasty"
+        assert last_comment == "Tasty"
 
