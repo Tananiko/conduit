@@ -24,29 +24,25 @@ class TestFileUpload(object):
 
     def test_upload_new_comment_from_file(self):
         conduit_login(self.driver)
-        WebDriverWait(
-            self.driver, 15).until(
-            EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Alma']"))
-        )
+        time.sleep(5)
         first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Alma']")
         first_article.click()
         element = WebDriverWait(
             self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
             )
-
+        post_comment_button = self.driver.find_element_by_xpath('//button[text()="Post Comment"]')
         with open('data.csv', 'r') as csvfile:
             csv_reader = csv.reader(csvfile)
             next(csv_reader)
             for row in csv_reader:
+                element.click()
                 element.send_keys(row[0])
                 self.driver.find_element_by_xpath("//textarea[@placeholder='Write a comment...']")
-                self.driver.find_element_by_xpath('//button[text()="Post Comment"]').click()
+                self.driver.find_element_by_xpath("//html").click
+                post_comment_button.click()
+                time.sleep(5)
 
-        WebDriverWait(
-            self.driver, 30).until(
-            EC.visibility_of_element_located((By.XPATH, '//p[@class="apple"]'))
-        )
         comment = self.driver.find_elements_by_class_name("card-text")
         last_comment = comment[0].text
         time.sleep(2)
