@@ -33,7 +33,7 @@ class TestFileUpload(object):
             self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//textarea[@placeholder='Write a comment...']"))
             )
-        with open('../data.csv', 'r', encoding="utf-8") as csvfile:
+        with open('data.csv', 'r', encoding="utf-8") as csvfile:
             csv_reader = (csvfile)
             for row in csv_reader:
                 element.send_keys(row)
