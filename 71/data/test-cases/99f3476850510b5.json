@@ -1,0 +1,78 @@
+{
+  "uid" : "99f3476850510b5",
+  "name" : "test_navigate_to_login",
+  "fullName" : "test.test_TC06_SajatCikkSzerk.TestEditBlogPost#test_navigate_to_login",
+  "historyId" : "d07c2ce87b456e874418d102d97ce377",
+  "time" : {
+    "start" : 1628660688521,
+    "stop" : 1628660689805,
+    "duration" : 1284
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8a1ab1f728e7d6e3",
+      "name" : "log",
+      "source" : "8a1ab1f728e7d6e3.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "83ed7ec9343558ae",
+      "name" : "stderr",
+      "source" : "83ed7ec9343558ae.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditBlogPost"
+  }, {
+    "name" : "host",
+    "value" : "fv-az39-671"
+  }, {
+    "name" : "thread",
+    "value" : "4030-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "99f3476850510b5.json",
+  "parameterValues" : [ ]
+}

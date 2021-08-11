@@ -1,9 +1,0 @@
-[ {
-  "buildOrder" : 70,
-  "reportUrl" : "https://Tananiko.github.io/conduit/70/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 20,
-    "retry" : 0
-  }
-} ]
