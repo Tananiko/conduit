@@ -1,62 +1,57 @@
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import datetime
-import time
 import random
 import string
+import csv
 from selenium.webdriver.common.keys import Keys
-
-
+from conduit_data import conduit_login
 
 class Datadownload(object):
+
     def setup(self):
-        self.driver = webdriver.Chrome("/Users/tarjanyibela/Downloads/chromedriver")
+        browser_options = Options()
+        browser_options.headless = True
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
         self.driver.get("http://conduitapp.progmasters.hu:1667/#/")
 
     def teardown(self):
         self.driver.quit()
 
-    def test_website(self):
-        self.driver.maximize_window()
-        assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]').text == "conduit"
 
+    def test_profile_content_download(self):
+        conduit_login(self.driver)
+        time.sleep(5)
 
-    def test_navigate_to_login(self):
+        profile_details = self.driver.find_element_by_xpath("//a[contains(text(),'Settings']")
+        profile_details.click()
+        time.sleep(5)
 
-        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').click("Tananiko-1")
-
-        element = WebDriverWait(
-            self.driver, 5).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div[4]/div/button")).click()
-        )
+        list = ['URL of profile picture', 'Username', 'Short bio about you', 'Email']
+        for i in list:
+            element = WebDriverWait(
+        self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f"{i.text}")))
         assert element
-        WebDriverWait(
-            self.driver, 3).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
 
-    def test_profile_settings(self):
-        profile_picture = self.driver.find_element_by_xpath("//input[@placeholder='URL of profile picture']")
-        assert profile_picture == 'https://static.productionready.io/images/smiley-cyrus.jpg'
-        reg_name = self.driver.find_element_by_xpath("//input[@placeholder='Your username']")
-        assert reg_name == "A1"
-        assert self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']")
-        self.driver.find_element_by_xpath("//input[@placeholder='Email']")
+        with open('profile.csv', 'w',) as csvfile:
+            csv_writer = csv.writer(csvfile)
+            next(csv_writer)
+            csv_writer.write(list)
 
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
+        for row in csv_writer:
+            self.driver.find_element_by_xpath("//input[@placeholder='URL of profile picture']").send.keys(row[0])
+            self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[1])
+            self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[2])
+            self.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys(row[3])
 
-    def test_screenshot(self):
-        capture_time = datetime.datetime.now().strftime("%Y!%m-%d_%H-%M-%S")
-        self.driver.save_screenshot("Profile Settings" + capture_time + ".png")
-
+        with open('profile.csv', 'r',) as csvfile:
+            csv_writer = csv.writer(csvfile)
+            first_row = csvfile.readline()
+            assert first_row == "https://static.productionready.io/images/smiley-cyrus.jpg"
+            time.sleep(5)
 
 
