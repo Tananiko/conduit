@@ -25,9 +25,9 @@ class TestFileUpload(object):
         conduit_login(self.driver)
         WebDriverWait(
             self.driver, 15).until(
-            EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Recipe']"))
+            EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Apple']"))
         )
-        first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
+        first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Apple']")
         first_article.click()
         element = WebDriverWait(
             self.driver, 10).until(
