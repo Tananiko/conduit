@@ -33,10 +33,10 @@ class TestDataListing(object):
         conduit_login(self.driver)
         time.sleep(5)
 
-        popular_tags = self.driver.find_elements_by_xpath('//div[@class="sidebar"]/div[@class="tag-list"]/a[text()="lorem"]')
-        popular_tags.click()
+        global_feed = self.driver.find_elements_by_xpath("//a[normalize-space()='Global Feed']")
+        global_feed.click()
         time.sleep(3)
-        popular_tags_list= self.driver.find_element_by_xpath('//a[@class="preview-link"]/h1')
-        assert len(popular_tags_list) > 0
+        ipsum_article_list = self.driver.find_element_by_xpath('//a[@class="preview-link"]/h1')
+        assert len(ipsum_article_list) != 0
 
 
