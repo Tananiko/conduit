@@ -31,20 +31,17 @@ class TestEditArticle(object):
         article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
         article.click()
         time.sleep(5)
-        # WebDriverWait(
-        #     self.driver, 30).until(
-        #     EC.visibility_of_element_located((By.XPATH, "//a[@class='btn btn-sm btn-outline-secondary']//span[1]"))
-        # )
-        delete_article = self.driver.find_element_by_xpath("//a[@class='btn btn-sm btn-outline-secondary']//span[1]")
+        delete_article = self.driver.find_element_by_xpath("//button[@class='btn btn-outline-danger btn-sm']")
         delete_article.click()
 
         time.sleep(5)
 
         WebDriverWait(
                 self.driver, 30).until(
-                EC.visibility_of_elements_located((By.CSS_SELECTOR, 'li.nav-item'))
+                EC.element_to_be_clickable((By.XPATH, "//a[normalize-space()='Home']"))
             )
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
+        self.driver.find_elements_by_link_text('Home')
         time.sleep(2)
         home_page = nav_items[0].text
         assert home_page == "Home"
