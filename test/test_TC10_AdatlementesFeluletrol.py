@@ -23,36 +23,30 @@ class TestDatadownload(object):
         self.driver.quit()
 
 
-    def test_profile_content_download(self):
+    def test_data_download(self):
         conduit_login(self.driver)
         time.sleep(5)
+
 
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
         profile_setting = nav_items[2]
         profile_setting.click()
         time.sleep(5)
 
-        list = ['URL of profile picture', 'Username', 'Short bio about you', 'Email']
-        for i in list:
-            element = WebDriverWait(
-        self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f"{list[i].text}")))
-        assert element
-
-        with open('profile.csv', 'w', ) as csvfile:
+      with open('profile.csv', 'w', ) as csvfile:
             csv_writer = csv.writer(csvfile)
             next(csv_writer)
             csv_writer.write(list)
 
         for row in csv_writer:
-            self.driver.find_element_by_xpath("//input[@placeholder='URL of profile picture']").send.keys(row[0])
-            self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[1])
-            self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[2])
-            self.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys(row[3])
+            self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[0])
+            self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[1])
 
-        with open('../profile.csv', 'r', ) as csvfile:
+        with open('profile.csv', 'r', ) as csvfile:
             csv_writer = csv.writer(csvfile)
             first_row = csvfile.readline()
-            assert first_row == "https://static.productionready.io/images/smiley-cyrus.jpg"
+            assert first_row == "A1"
             time.sleep(5)
 
+        print(list)
 
