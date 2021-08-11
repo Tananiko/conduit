@@ -32,9 +32,9 @@ class TestEditArticle(object):
 
         WebDriverWait(
             self.driver, 50).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-danger btn-sm']//span[1]"))
+            EC.element_to_be_clickable((By.XPATH, "//a[@class='btn btn-sm btn-outline-secondary']//span[1]"))
         )
-        delete_article = self.driver.find_element_by_xpath("//button[@class='btn btn-outline-danger btn-sm']//span[1]")
+        delete_article = self.driver.find_element_by_xpath("//a[@class='btn btn-sm btn-outline-secondary']//span[1]")
         delete_article.click()
 
         WebDriverWait(
@@ -42,7 +42,7 @@ class TestEditArticle(object):
             EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/div/div[1]/div/h1'))
         )
 
-        self.driver.find_element_by_link_text("http://conduitapp.progmasters.hu:1667/#/articles/")
+        self.driver.find_element_by_link_text("http://conduitapp.progmasters.hu:1667/#/")
         WebDriverWait(
             self.driver, 25)
 
