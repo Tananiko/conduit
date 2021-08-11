@@ -1,0 +1,86 @@
+{
+  "uid" : "74c3c3ff6c6d807e",
+  "name" : "test_delete_own_article",
+  "fullName" : "test.test_TC09_SajatCikkTorles.TestEditArticle#test_delete_own_article",
+  "historyId" : "d35d6188d78f2535ab2374ec67e6ee95",
+  "time" : {
+    "start" : 1628669000019,
+    "stop" : 1628669001925,
+    "duration" : 1906
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+  "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestEditArticle object at 0x7f296f4c3d90>\n\n    def test_delete_own_article(self):\n        conduit_login(self.driver)\n        WebDriverWait(\n            self.driver, 15).until(\n            EC.element_to_be_clickable((By.XPATH, \"//h1[normalize-space()='Recipe']\"))\n        )\n        article = self.driver.find_element_by_xpath(\"//h1[normalize-space()='Recipe']\")\n        article.click()\n    \n        WebDriverWait(\n            self.driver, 50).until(\n            EC.visibility_of_all_elements_located((By.XPATH, \"//button[@class='btn btn-outline-danger btn-sm']//span[1]\"))\n        )\n        delete_article = self.driver.find_elements_by_xpath(\"//button[@class='btn btn-outline-danger btn-sm']//span[1]\")\n>       delete_article.click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC09_SajatCikkTorles.py:38: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+    "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestEditArticle object at 0x7f296f4c3d90>\n\n    def test_delete_own_article(self):\n        conduit_login(self.driver)\n        WebDriverWait(\n            self.driver, 15).until(\n            EC.element_to_be_clickable((By.XPATH, \"//h1[normalize-space()='Recipe']\"))\n        )\n        article = self.driver.find_element_by_xpath(\"//h1[normalize-space()='Recipe']\")\n        article.click()\n    \n        WebDriverWait(\n            self.driver, 50).until(\n            EC.visibility_of_all_elements_located((By.XPATH, \"//button[@class='btn btn-outline-danger btn-sm']//span[1]\"))\n        )\n        delete_article = self.driver.find_elements_by_xpath(\"//button[@class='btn btn-outline-danger btn-sm']//span[1]\")\n>       delete_article.click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC09_SajatCikkTorles.py:38: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4086a14d4ac78da0",
+      "name" : "log",
+      "source" : "4086a14d4ac78da0.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "76b0e2efd51d5a6e",
+      "name" : "stderr",
+      "source" : "76b0e2efd51d5a6e.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditArticle"
+  }, {
+    "name" : "host",
+    "value" : "fv-az39-671"
+  }, {
+    "name" : "thread",
+    "value" : "3952-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "74c3c3ff6c6d807e.json",
+  "parameterValues" : [ ]
+}
