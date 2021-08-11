@@ -35,10 +35,10 @@ class TestDatadownload(object):
         list = ['URL of profile picture', 'Username', 'Short bio about you', 'Email']
         for i in list:
             element = WebDriverWait(
-        self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f"{i.text}")))
+        self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f"{list[i].text}")))
         assert element
 
-        with open('../profile.csv', 'w', ) as csvfile:
+        with open('profile.csv', 'w', ) as csvfile:
             csv_writer = csv.writer(csvfile)
             next(csv_writer)
             csv_writer.write(list)
