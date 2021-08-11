@@ -1,0 +1,86 @@
+{
+  "uid" : "b2aab4fb7b89658e",
+  "name" : "test_profile_content_download",
+  "fullName" : "test.test_TC10_AdatlementesFeluletrol.TestDatadownload#test_profile_content_download",
+  "historyId" : "dd39ce62a0bd35a4fc424e360ecf7cec",
+  "time" : {
+    "start" : 1628709387268,
+    "stop" : 1628709397552,
+    "duration" : 10284
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'str' object has no attribute 'text'",
+  "statusTrace" : "self = <test_TC10_AdatlementesFeluletrol.TestDatadownload object at 0x7f4258693310>\n\n    def test_profile_content_download(self):\n        conduit_login(self.driver)\n        time.sleep(5)\n    \n        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')\n        profile_setting = nav_items[2]\n        profile_setting.click()\n        time.sleep(5)\n    \n        list = ['URL of profile picture', 'Username', 'Short bio about you', 'Email']\n        for i in list:\n            element = WebDriverWait(\n>       self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f\"{i.text}\")))\nE           AttributeError: 'str' object has no attribute 'text'\n\ntest/test_TC10_AdatlementesFeluletrol.py:38: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'str' object has no attribute 'text'",
+    "statusTrace" : "self = <test_TC10_AdatlementesFeluletrol.TestDatadownload object at 0x7f4258693310>\n\n    def test_profile_content_download(self):\n        conduit_login(self.driver)\n        time.sleep(5)\n    \n        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')\n        profile_setting = nav_items[2]\n        profile_setting.click()\n        time.sleep(5)\n    \n        list = ['URL of profile picture', 'Username', 'Short bio about you', 'Email']\n        for i in list:\n            element = WebDriverWait(\n>       self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f\"{i.text}\")))\nE           AttributeError: 'str' object has no attribute 'text'\n\ntest/test_TC10_AdatlementesFeluletrol.py:38: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b7e7233e2cb236e5",
+      "name" : "log",
+      "source" : "b7e7233e2cb236e5.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "8105a5ef090b795a",
+      "name" : "stderr",
+      "source" : "8105a5ef090b795a.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC10_AdatlementesFeluletrol"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDatadownload"
+  }, {
+    "name" : "host",
+    "value" : "fv-az72-672"
+  }, {
+    "name" : "thread",
+    "value" : "3812-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC10_AdatlementesFeluletrol"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b2aab4fb7b89658e.json",
+  "parameterValues" : [ ]
+}

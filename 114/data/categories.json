@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'str' object has no attribute 'text'",
+      "children" : [ {
+        "name" : "test_profile_content_download",
+        "uid" : "b2aab4fb7b89658e",
+        "parentUid" : "b00f7af49d9b1df1dfb3bd012821fd40",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628709387268,
+          "stop" : 1628709397552,
+          "duration" : 10284
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b00f7af49d9b1df1dfb3bd012821fd40"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
