@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -14,7 +16,7 @@ class TestFileUpload(object):
 
     def setup(self):
         browser_options = Options()
-        browser_options.headless = True
+        browser_options.headless = False
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
         self.driver.get("http://conduitapp.progmasters.hu:1667/#/")
 
@@ -25,9 +27,9 @@ class TestFileUpload(object):
         conduit_login(self.driver)
         WebDriverWait(
             self.driver, 15).until(
-            EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Apple']"))
+            EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Alma']"))
         )
-        first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Apple']")
+        first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Alma']")
         first_article.click()
         element = WebDriverWait(
             self.driver, 10).until(
@@ -38,13 +40,12 @@ class TestFileUpload(object):
             for row in csv_reader:
                 element.send_keys(row)
                 self.driver.find_element_by_xpath('//button[text()="Post Comment"]').click()
-            WebDriverWait(
-                self.driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, '//p[normalize-space()="Tasty,"]'))
-            )
-            comment = self.driver.find_elements_by_class_name("card-text")
-            last_comment = comment[0].text
-            WebDriverWait(
-                self.driver, 10)
-            assert last_comment == "Tasty,"
+        WebDriverWait(
+            self.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//p[normalize-space()="Tasty,"]'))
+        )
+        comment = self.driver.find_elements_by_class_name("card-text")
+        last_comment = comment[4].text
+        time.sleep(2)
+        assert last_comment == "Tasty,"
 

@@ -34,7 +34,7 @@ class TestEditArticle(object):
             self.driver, 50).until(
             EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-outline-danger btn-sm']//span[1]"))
         )
-        delete_article = self.driver.find_elements_by_xpaths("//button[@class='btn btn-outline-danger btn-sm']//span[1]")
+        delete_article = self.driver.find_elements_by_xpath("//button[@class='btn btn-outline-danger btn-sm']//span[1]")
         delete_article.click()
 
         WebDriverWait(
