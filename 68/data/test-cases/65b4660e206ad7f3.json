@@ -1,0 +1,86 @@
+{
+  "uid" : "65b4660e206ad7f3",
+  "name" : "test_create_new_article",
+  "fullName" : "test.test_TC06_SajatCikkSzerk.TestEditBlogPost#test_create_new_article",
+  "historyId" : "84ff1479490bca649770b2402589696e",
+  "time" : {
+    "start" : 1628659864819,
+    "stop" : 1628659864834,
+    "duration" : 15
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+  "statusTrace" : "self = <test_TC06_SajatCikkSzerk.TestEditBlogPost object at 0x7fa39c8b7610>\n\n    def test_create_new_article(self):\n        # login_to_conduit(self.driver)\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n>       self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC06_SajatCikkSzerk.py:45: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'list' object has no attribute 'click'",
+    "statusTrace" : "self = <test_TC06_SajatCikkSzerk.TestEditBlogPost object at 0x7fa39c8b7610>\n\n    def test_create_new_article(self):\n        # login_to_conduit(self.driver)\n    \n        self.rand_string = 'Recipe'.join(random.choices(string.ascii_uppercase + string.digits, k=15))\n>       self.driver.find_elements_by_css_selector('li.nav-item'[1]).click()\nE       AttributeError: 'list' object has no attribute 'click'\n\ntest/test_TC06_SajatCikkSzerk.py:45: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "deca6c6a4a8fe22e",
+      "name" : "log",
+      "source" : "deca6c6a4a8fe22e.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "55938689afef8d91",
+      "name" : "stderr",
+      "source" : "55938689afef8d91.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditBlogPost"
+  }, {
+    "name" : "host",
+    "value" : "fv-az72-672"
+  }, {
+    "name" : "thread",
+    "value" : "3917-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC06_SajatCikkSzerk"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "65b4660e206ad7f3.json",
+  "parameterValues" : [ ]
+}
