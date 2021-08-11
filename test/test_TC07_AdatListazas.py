@@ -33,10 +33,10 @@ class TestDataListing(object):
         conduit_login(self.driver)
         time.sleep(5)
 
-        your_feed = self.driver.find_elements_by_xpath("//a[normalize-space()='Your Feed']")
-        your_feed.click()
-        time.sleep(3)
-        your_feed_list = self.driver.find_element_by_xpath('//a[@class="preview-link"]/h1')
-        assert len(your_feed_list) != 0
-
+        articles = self.driver.find_elements_by_xpath("//h1")
+        article_titles = []
+        for i in articles:
+            article_titles.append(i.text)
+        print(article_titles)
+        assert len(article_titles) == len(articles)
 
