@@ -1,0 +1,111 @@
+[ {
+  "uid" : "cf2a64433e0abaa0",
+  "name" : "test_delete_own_article",
+  "time" : {
+    "start" : 1628708417755,
+    "stop" : 1628708417755,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "78bbf4dd6a2c8f28",
+  "name" : "test_home_page_appearances",
+  "time" : {
+    "start" : 1628708391041,
+    "stop" : 1628708391095,
+    "duration" : 54
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b3d67e65c00abcb9",
+  "name" : "test_navigate_to_logout",
+  "time" : {
+    "start" : 1628708419160,
+    "stop" : 1628708419160,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "aaebd7fbea253b53",
+  "name" : "test_edit_own_article",
+  "time" : {
+    "start" : 1628708413575,
+    "stop" : 1628708413575,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "eefe4718fc4bfa9b",
+  "name" : "test_website",
+  "time" : {
+    "start" : 1628708392083,
+    "stop" : 1628708392189,
+    "duration" : 106
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fdc194a1a2d31c3a",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628708394095,
+    "stop" : 1628708394163,
+    "duration" : 68
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "df20a42e6f50fd57",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628708396058,
+    "stop" : 1628708398556,
+    "duration" : 2498
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa7c4ae7e0a31deb",
+  "name" : "test_navigate_to_login",
+  "time" : {
+    "start" : 1628708400460,
+    "stop" : 1628708401795,
+    "duration" : 1335
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3cd6d34ed9f62538",
+  "name" : "test_create_new_article",
+  "time" : {
+    "start" : 1628708402954,
+    "stop" : 1628708413468,
+    "duration" : 10514
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "fa6e58228a866339",
+  "name" : "test_upload_new_comment_from_file",
+  "time" : {
+    "start" : 1628708414980,
+    "stop" : 1628708414980,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "6244511fb78fcb92",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628708416379,
+    "stop" : 1628708416379,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

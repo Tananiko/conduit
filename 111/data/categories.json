@@ -1,0 +1,95 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "3cd6d34ed9f62538",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628708402954,
+          "stop" : 1628708413468,
+          "duration" : 10514
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_edit_own_article",
+        "uid" : "aaebd7fbea253b53",
+        "parentUid" : "60739a25bd90e47457c4f66f4e3d739c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628708413575,
+          "stop" : 1628708413575,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_upload_new_comment_from_file",
+        "uid" : "fa6e58228a866339",
+        "parentUid" : "60739a25bd90e47457c4f66f4e3d739c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628708414980,
+          "stop" : 1628708414980,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_pagination",
+        "uid" : "6244511fb78fcb92",
+        "parentUid" : "60739a25bd90e47457c4f66f4e3d739c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628708416379,
+          "stop" : 1628708416379,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_own_article",
+        "uid" : "cf2a64433e0abaa0",
+        "parentUid" : "60739a25bd90e47457c4f66f4e3d739c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628708417755,
+          "stop" : 1628708417755,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_navigate_to_logout",
+        "uid" : "b3d67e65c00abcb9",
+        "parentUid" : "60739a25bd90e47457c4f66f4e3d739c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628708419160,
+          "stop" : 1628708419160,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "60739a25bd90e47457c4f66f4e3d739c"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
