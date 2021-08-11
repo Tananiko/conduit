@@ -1,0 +1,77 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/settings\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_profile_settings",
+        "uid" : "b4576325ec768ee5",
+        "parentUid" : "af07a78121f8d261844f0d05f775de5a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628672393160,
+          "stop" : 1628672393449,
+          "duration" : 289
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af07a78121f8d261844f0d05f775de5a"
+    }, {
+      "name" : "AttributeError: 'str' object has no attribute 'include'",
+      "children" : [ {
+        "name" : "test_upload_new_article_from_file",
+        "uid" : "701b222303096fd2",
+        "parentUid" : "4d4695fd16c989a93792a2f2d94f6b70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628672394468,
+          "stop" : 1628672399005,
+          "duration" : 4537
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4d4695fd16c989a93792a2f2d94f6b70"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "4361b41a381507ac",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628672408941,
+          "stop" : 1628672408957,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    }, {
+      "name" : "NameError: name 'time' is not defined",
+      "children" : [ {
+        "name" : "test_delete_own_article",
+        "uid" : "7a2ccb6d5599f5dd",
+        "parentUid" : "f2d298c75ef72f8baafdf275f5959cf0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628672410933,
+          "stop" : 1628672412349,
+          "duration" : 1416
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f2d298c75ef72f8baafdf275f5959cf0"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
