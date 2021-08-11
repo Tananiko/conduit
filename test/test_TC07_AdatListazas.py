@@ -3,14 +3,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
-import datetime
 import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import random
 import string
+import csv
 from selenium.webdriver.common.keys import Keys
+from conduit_data import conduit_login
 
-class Datadownload(object):
+
+
+class TestDataListing(object):
 
     def setup(self):
         browser_options = Options()
@@ -21,48 +29,14 @@ class Datadownload(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_website(self):
-        self.driver.maximize_window()
-        time.sleep(2)
-        assert self.driver.find_element_by_xpath('//a[@class="navbar-brand router-link-exact-active router-link-active"]'
-                                                 ).text == "conduit"
+    def test_tag_list(self):
+        conduit_login(self.driver)
+        time.sleep(5)
 
-    def test_navigate_to_login(self):
-        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("Aniko1@gmail.com")
-        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Tananiko-1")
-        self.driver.find_element_by_xpath("//button[normalize-space()='Sign in']").click()
-        self.driver.find_elements_by_css_selector('li.nav-item')
+        popular_tags = self.driver.find_elements_by_xpath('//div[@class="sidebar"]/div[@class="tag-list"]/a[text()="lorem"]')
+        popular_tags.click()
+        time.sleep(3)
+        popular_tags_list= self.driver.find_element_by_xpath('//a[@class="preview-link"]/h1')
+        assert len(popular_tags_list) > 0
 
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
 
-    def test_profile_settings(self):
-        self.driver.find_element_by_xpath("//a[contains(text(),'Settings']").click()
-        self.driver.find_element_by_xpath("//input[@placeholder='Your username']")
-        self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']")
-        self.driver.find_element_by_xpath("//input[@placeholder='Email']")
-
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.LINK_TEXT, "A1"))
-        )
-
-        list = ['URL of profile picture', 'Short bio about you', 'Email']
-        for i in list:
-            element = WebDriverWait(
-                self.driver, 10).until(EC.visibility_of_all_elements_located((By.XPATH, f"{i.text}")))
-            assert element
-        self.driver.save_screenshot('ss_profile.png')
-
-        with open('profile.csv', 'w', encoding="utf-8", newline='', quotechar='*') as csvfile:
-            csv_writer = (csvfile)
-            next(csv_writer)
-            csv_writer.write(list)
-
-        for row in csv_writer:
-            self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[0])
-            self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[1])
-            self.driver.find_element_by_xpath("//input[@placeholder='Email']").send_keys(row[2])
