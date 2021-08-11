@@ -18,7 +18,7 @@ from conduit_data import conduit_login
 
 
 
-class TestDataListing(object):
+class TestDataListingArticels(object):
 
     def setup(self):
         browser_options = Options()
@@ -29,7 +29,7 @@ class TestDataListing(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_tag_list(self):
+    def test_data_list_articles(self):
         conduit_login(self.driver)
         time.sleep(5)
 
