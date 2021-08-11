@@ -1,0 +1,81 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/settings\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_profile_settings",
+        "uid" : "ee268fe8ecc44766",
+        "parentUid" : "af07a78121f8d261844f0d05f775de5a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628670561594,
+          "stop" : 1628670561831,
+          "duration" : 237
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af07a78121f8d261844f0d05f775de5a"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "b53943dc5f1c32d7",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628670578849,
+          "stop" : 1628670578862,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"http://conduitapp.progmasters.hu:1667/#/\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_delete_own_article",
+        "uid" : "6af890d9d3946c65",
+        "parentUid" : "63004a8011c548ef98f3d246dac528df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628670580309,
+          "stop" : 1628670582773,
+          "duration" : 2464
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "63004a8011c548ef98f3d246dac528df"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'Gratulálok,' == 'Tasty,'\n  - Tasty,\n  + Gratulálok,",
+      "children" : [ {
+        "name" : "test_upload_new_article_from_file",
+        "uid" : "fb97e7a0afc3781b",
+        "parentUid" : "3fd7f5c452bb493e187eaf31f996b19a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628670563311,
+          "stop" : 1628670568186,
+          "duration" : 4875
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3fd7f5c452bb493e187eaf31f996b19a"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
