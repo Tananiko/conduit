@@ -30,21 +30,16 @@ class TestDatadownload(object):
         profile_setting = nav_items[2]
         profile_setting.click()
         time.sleep(5)
+        user_name = self.driver.find_element_by_xpath("//input[@placeholder='Your username']").text
 
-      with open('profile.csv', 'w', ) as csvfile:
-            csv_writer = csv.writer(csvfile)
-            next(csv_writer)
-            csv_writer.write(list)
+    with open('profile.csv', 'w') as file:
+        csv_writer = csv.writer(file)
+        csv_writer.writerow(["username"])
 
-        for row in csv_writer:
-            self.driver.find_element_by_xpath("//input[@placeholder='Your username']").send_keys(row[0])
-            self.driver.find_element_by_xpath("//textarea[@placeholder='Short bio about you']").send_keys(row[1])
-
-        with open('profile.csv', 'r', ) as csvfile:
-            csv_writer = csv.writer(csvfile)
-            first_row = csvfile.readline()
-            assert first_row == "A1"
-            time.sleep(5)
-
-        print(list)
+    with open('profile.csv', 'r') as file1:
+        csv_reader = csv.reader(file1)
+        next(csv_reader)
+        for row in csv_reader:
+            assert row[0] == user_name
+    time.sleep(5)
 
