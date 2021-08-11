@@ -1,0 +1,86 @@
+{
+  "uid" : "2588e41b7cd2bc66",
+  "name" : "test_delete_own_article",
+  "fullName" : "test.test_TC09_SajatCikkTorles.TestEditArticle#test_delete_own_article",
+  "historyId" : "d35d6188d78f2535ab2374ec67e6ee95",
+  "time" : {
+    "start" : 1628672679602,
+    "stop" : 1628672686070,
+    "duration" : 6468
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'http://condu...ticles/recipe' == 'http://localhost:1667/#/'\n  - http://localhost:1667/#/\n  + http://conduitapp.progmasters.hu:1667/#/articles/recipe",
+  "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestEditArticle object at 0x7fa250e97160>\n\n    def test_delete_own_article(self):\n        conduit_login(self.driver)\n        WebDriverWait(\n            self.driver, 15).until(\n            EC.element_to_be_clickable((By.XPATH, \"//h1[normalize-space()='Recipe']\"))\n        )\n        article = self.driver.find_element_by_xpath(\"//h1[normalize-space()='Recipe']\")\n        article.click()\n    \n        time.sleep(5)\n    \n        assert self.driver.current_url == \"http://conduitapp.progmasters.hu:1667/#/articles/recipe\"\n        WebDriverWait(\n            self.driver, 30).until(\n            EC.element_to_be_clickable((By.XPATH, \"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\"))\n        )\n        delete_article = self.driver.find_element_by_xpath(\"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\")\n        delete_article.click()\n    \n>       assert self.driver.current_url == 'http://localhost:1667/#/'\nE       AssertionError: assert 'http://condu...ticles/recipe' == 'http://localhost:1667/#/'\nE         - http://localhost:1667/#/\nE         + http://conduitapp.progmasters.hu:1667/#/articles/recipe\n\ntest/test_TC09_SajatCikkTorles.py:44: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 'http://condu...ticles/recipe' == 'http://localhost:1667/#/'\n  - http://localhost:1667/#/\n  + http://conduitapp.progmasters.hu:1667/#/articles/recipe",
+    "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestEditArticle object at 0x7fa250e97160>\n\n    def test_delete_own_article(self):\n        conduit_login(self.driver)\n        WebDriverWait(\n            self.driver, 15).until(\n            EC.element_to_be_clickable((By.XPATH, \"//h1[normalize-space()='Recipe']\"))\n        )\n        article = self.driver.find_element_by_xpath(\"//h1[normalize-space()='Recipe']\")\n        article.click()\n    \n        time.sleep(5)\n    \n        assert self.driver.current_url == \"http://conduitapp.progmasters.hu:1667/#/articles/recipe\"\n        WebDriverWait(\n            self.driver, 30).until(\n            EC.element_to_be_clickable((By.XPATH, \"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\"))\n        )\n        delete_article = self.driver.find_element_by_xpath(\"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\")\n        delete_article.click()\n    \n>       assert self.driver.current_url == 'http://localhost:1667/#/'\nE       AssertionError: assert 'http://condu...ticles/recipe' == 'http://localhost:1667/#/'\nE         - http://localhost:1667/#/\nE         + http://conduitapp.progmasters.hu:1667/#/articles/recipe\n\ntest/test_TC09_SajatCikkTorles.py:44: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c41af2d89f844381",
+      "name" : "log",
+      "source" : "c41af2d89f844381.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "3a58647a92c930a2",
+      "name" : "stderr",
+      "source" : "3a58647a92c930a2.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditArticle"
+  }, {
+    "name" : "host",
+    "value" : "fv-az47-289"
+  }, {
+    "name" : "thread",
+    "value" : "3825-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2588e41b7cd2bc66.json",
+  "parameterValues" : [ ]
+}
