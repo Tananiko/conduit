@@ -41,11 +41,11 @@ class TestFileUpload(object):
                 element.send_keys(row)
                 self.driver.find_element_by_xpath('//button[text()="Post Comment"]').click()
         WebDriverWait(
-            self.driver, 10).until(
+            self.driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//p[normalize-space()="Tasty,"]'))
         )
         comment = self.driver.find_elements_by_class_name("card-text")
-        last_comment = comment[4].text
+        last_comment = comment[-1].text
         time.sleep(2)
         assert last_comment == "Tasty,"
 
