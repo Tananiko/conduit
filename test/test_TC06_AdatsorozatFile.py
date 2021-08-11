@@ -23,11 +23,11 @@ class TestFileUpload(object):
 
     def test_upload_new_article_from_file(self):
         conduit_login(self.driver)
-        first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
         WebDriverWait(
             self.driver, 15).until(
-            EC.visibility_of_element_located((By.XPATH, "//h1[normalize-space()='Recipe']"))
+            EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Recipe']"))
         )
+        first_article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
         first_article.click()
         element = WebDriverWait(
             self.driver, 10).until(
