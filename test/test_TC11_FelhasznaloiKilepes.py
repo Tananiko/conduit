@@ -36,7 +36,9 @@ class TestLogoutConduit(object):
         logout_button = self.driver.find_element_by_xpath('//a[@active-class="active"]')
         logout_button.click()
         WebDriverWait(
-            self.driver, 30)
+            self.driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, '//a[@href="#/login"]'))
+        )
         sign_in_button = self.driver.find_elements_by_xpath('//a[@href="#/login"]')
         assert sign_in_button.is_displayed()
 
