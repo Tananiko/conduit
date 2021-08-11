@@ -40,5 +40,20 @@ class TestEditArticle(object):
 
         time.sleep(5)
 
-        assert self.driver.current_url == 'http://localhost:1667/#/'
+        WebDriverWait(
+                self.driver, 30).until(
+                EC.visibility_of_elements_located((By.CSS_SELECTOR, 'li.nav-item'))
+            )
+        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
+        time.sleep(2)
+        home_page = nav_items[0].text
+        assert home_page == "Home"
+        home_page = nav_items[1].text
+        assert home_page == "New Article"
+        home_page = nav_items[2].text
+        assert home_page == "Settings"
+        home_page = nav_items[3].text
+        assert home_page == "A1"
+        home_page = nav_items[4].text
+        assert home_page == "Log out"
 
