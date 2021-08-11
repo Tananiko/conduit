@@ -30,26 +30,13 @@ class TestEditArticle(object):
         article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
         article.click()
 
+        assert self.driver.current_url == "http://conduitapp.progmasters.hu:1667/#/articles/recipe"
         WebDriverWait(
-            self.driver, 50).until(
+            self.driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, "//a[@class='btn btn-sm btn-outline-secondary']//span[1]"))
         )
         delete_article = self.driver.find_element_by_xpath("//a[@class='btn btn-sm btn-outline-secondary']//span[1]")
         delete_article.click()
 
-        WebDriverWait(
-            self.driver, 50).until(
-            EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/div/div[1]/div/h1'))
-        )
+        assert self.driver.current_url == 'http://localhost:1667/#/'
 
-        # assert (self.browser.current_url == 'http://localhost:1667/#/'
-
-        self.driver.find_element_by_link_text("http://conduitapp.progmasters.hu:1667/#/articles/")
-        WebDriverWait(
-            self.driver, 25)
-
-        self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
-
-        assert self.driver.find_element_by_xpath("//p[normalize-space()='Page Not Found']")
-        WebDriverWait(
-            self.driver, 50)
