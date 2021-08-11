@@ -1,0 +1,107 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/settings\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_profile_settings",
+        "uid" : "c9aa3b244c750143",
+        "parentUid" : "af07a78121f8d261844f0d05f775de5a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628668256163,
+          "stop" : 1628668256490,
+          "duration" : 327
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af07a78121f8d261844f0d05f775de5a"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.\n  (unknown error: DevToolsActivePort file doesn't exist)\n  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)",
+      "children" : [ {
+        "name" : "test_upload_new_article_from_file",
+        "uid" : "5caa7d6f53b252b7",
+        "parentUid" : "e4a7d37349393b5a9e33d7e741170037",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628668256636,
+          "stop" : 1628668256636,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e4a7d37349393b5a9e33d7e741170037"
+    }, {
+      "name" : "AttributeError: 'list' object has no attribute 'click'",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "1da8e34044074f21",
+        "parentUid" : "13042c33fb6140e3ed0a430b874b43b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628668269439,
+          "stop" : 1628668269451,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_own_article",
+        "uid" : "1b8ef45f233e12c3",
+        "parentUid" : "13042c33fb6140e3ed0a430b874b43b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628668284510,
+          "stop" : 1628668286987,
+          "duration" : 2477
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "13042c33fb6140e3ed0a430b874b43b8"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_edit_own_article",
+        "uid" : "cfa467e43ddb5ff1",
+        "parentUid" : "aaf24028905bd138f73ea0a992176443",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628668271932,
+          "stop" : 1628668271949,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "aaf24028905bd138f73ea0a992176443"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "6cd9a5f8cb791bae",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628668281967,
+          "stop" : 1628668281983,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

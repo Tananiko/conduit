@@ -1,0 +1,78 @@
+{
+  "uid" : "ded084f428366435",
+  "name" : "test_navigate_to_login",
+  "fullName" : "test.test_TC08_TobbOldalasBejaras.TestPaginationConduit#test_navigate_to_login",
+  "historyId" : "91eed4dae2b799e88c75834b2ad984f8",
+  "time" : {
+    "start" : 1628668278112,
+    "stop" : 1628668279486,
+    "duration" : 1374
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a5e6c15ce6c04c50",
+      "name" : "log",
+      "source" : "a5e6c15ce6c04c50.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "642e8c00e17f2063",
+      "name" : "stderr",
+      "source" : "642e8c00e17f2063.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC08_TobbOldalasBejaras"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPaginationConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az82-15"
+  }, {
+    "name" : "thread",
+    "value" : "3803-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC08_TobbOldalasBejaras"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ded084f428366435.json",
+  "parameterValues" : [ ]
+}
