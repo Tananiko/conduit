@@ -1,0 +1,111 @@
+[ {
+  "uid" : "2126637bd207e5ad",
+  "name" : "test_navigate_to_logout",
+  "time" : {
+    "start" : 1628700696334,
+    "stop" : 1628700697938,
+    "duration" : 1604
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "735aae3a0778536b",
+  "name" : "test_website",
+  "time" : {
+    "start" : 1628700642721,
+    "stop" : 1628700642823,
+    "duration" : 102
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aff382b64324ca21",
+  "name" : "test_delete_own_article",
+  "time" : {
+    "start" : 1628700680286,
+    "stop" : 1628700694827,
+    "duration" : 14541
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "426ae1598e76355a",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628700646865,
+    "stop" : 1628700649593,
+    "duration" : 2728
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c584010547700161",
+  "name" : "test_edit_own_article",
+  "time" : {
+    "start" : 1628700660760,
+    "stop" : 1628700664072,
+    "duration" : 3312
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf55b49db4d5bf71",
+  "name" : "test_home_page_appearances",
+  "time" : {
+    "start" : 1628700641183,
+    "stop" : 1628700641244,
+    "duration" : 61
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "786f6e67f7c3a1c7",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628700670703,
+    "stop" : 1628700678796,
+    "duration" : 8093
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9470c53dc5a4c11",
+  "name" : "test_upload_new_comment_from_file",
+  "time" : {
+    "start" : 1628700666559,
+    "stop" : 1628700669173,
+    "duration" : 2614
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c1cf24625dec63dc",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628700644314,
+    "stop" : 1628700644380,
+    "duration" : 66
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d14aafae1df3ff9a",
+  "name" : "test_navigate_to_login",
+  "time" : {
+    "start" : 1628700651085,
+    "stop" : 1628700652483,
+    "duration" : 1398
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c0138cda2617fe3",
+  "name" : "test_create_new_article",
+  "time" : {
+    "start" : 1628700654978,
+    "stop" : 1628700658291,
+    "duration" : 3313
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
