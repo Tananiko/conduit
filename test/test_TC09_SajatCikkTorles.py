@@ -42,11 +42,13 @@ class TestEditArticle(object):
             EC.visibility_of_element_located((By.XPATH, '//*[@id="app"]/div/div[1]/div/h1'))
         )
 
+        # assert (self.browser.current_url == 'http://localhost:1667/#/'
+
         self.driver.find_element_by_link_text("http://conduitapp.progmasters.hu:1667/#/articles/")
         WebDriverWait(
             self.driver, 25)
 
-
+        self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
 
         assert self.driver.find_element_by_xpath("//p[normalize-space()='Page Not Found']")
         WebDriverWait(
