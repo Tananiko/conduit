@@ -10,7 +10,7 @@ import csv
 from selenium.webdriver.common.keys import Keys
 from conduit_data import conduit_login
 
-class TestFileUpload(object):
+class TestEditArticle(object):
 
     def setup(self):
         browser_options = Options()
@@ -21,7 +21,7 @@ class TestFileUpload(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_upload_new_article_from_file(self):
+    def test_edit_own_article(self):
         conduit_login(self.driver)
         WebDriverWait(
             self.driver, 15).until(
