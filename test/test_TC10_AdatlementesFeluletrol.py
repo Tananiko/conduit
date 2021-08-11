@@ -27,8 +27,9 @@ class TestDatadownload(object):
         conduit_login(self.driver)
         time.sleep(5)
 
-        profile_details = self.driver.find_element_by_xpath("//a[contains(text(),'Settings']")
-        profile_details.click()
+        nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
+        profile_setting = nav_items[2]
+        profile_setting.click()
         time.sleep(5)
 
         list = ['URL of profile picture', 'Username', 'Short bio about you', 'Email']
