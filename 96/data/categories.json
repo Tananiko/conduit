@@ -1,0 +1,77 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/settings\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_profile_settings",
+        "uid" : "c65a07c5d2778945",
+        "parentUid" : "af07a78121f8d261844f0d05f775de5a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628685829162,
+          "stop" : 1628685829394,
+          "duration" : 232
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af07a78121f8d261844f0d05f775de5a"
+    }, {
+      "name" : "TypeError: 'builtin_function_or_method' object is not an iterator",
+      "children" : [ {
+        "name" : "test_upload_new_comment_from_file",
+        "uid" : "b97456604b966391",
+        "parentUid" : "5f8262808f789af915b877ef317c2824",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628685831852,
+          "stop" : 1628685834271,
+          "duration" : 2419
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5f8262808f789af915b877ef317c2824"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "2938c31f1242e577",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628685844893,
+          "stop" : 1628685844906,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    }, {
+      "name" : "AttributeError: module 'selenium.webdriver.support.expected_conditions' has no attribute 'visibility_of_elements_located'",
+      "children" : [ {
+        "name" : "test_delete_own_article",
+        "uid" : "4ebf4c90aec8f619",
+        "parentUid" : "3c39b92ec8a22469721fbc763fb81f03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628685847350,
+          "stop" : 1628685859232,
+          "duration" : 11882
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3c39b92ec8a22469721fbc763fb81f03"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
