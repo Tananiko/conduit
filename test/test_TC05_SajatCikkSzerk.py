@@ -4,10 +4,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import random
-import string
-import csv
-from selenium.webdriver.common.keys import Keys
 from conduit_data import conduit_login
 
 class TestEditArticle(object):
