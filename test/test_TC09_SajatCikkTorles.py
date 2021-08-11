@@ -25,16 +25,16 @@ class TestEditArticle(object):
     def test_delete_own_article(self):
         conduit_login(self.driver)
         WebDriverWait(
-            self.driver, 15).until(
+            self.driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, "//h1[normalize-space()='Recipe']"))
         )
         article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
         article.click()
-
-        WebDriverWait(
-            self.driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, "//a[@class='btn btn-sm btn-outline-secondary']//span[1]"))
-        )
+        time.sleep(5)
+        # WebDriverWait(
+        #     self.driver, 30).until(
+        #     EC.visibility_of_element_located((By.XPATH, "//a[@class='btn btn-sm btn-outline-secondary']//span[1]"))
+        # )
         delete_article = self.driver.find_element_by_xpath("//a[@class='btn btn-sm btn-outline-secondary']//span[1]")
         delete_article.click()
 
