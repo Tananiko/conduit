@@ -1,0 +1,169 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az72-672",
+    "children" : [ {
+      "name" : "3937-MainThread",
+      "children" : [ {
+        "name" : "test_website",
+        "uid" : "35d793acefd833c7",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710063433,
+          "stop" : 1628710063514,
+          "duration" : 81
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_own_article",
+        "uid" : "d5f14b1816e583d2",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710117267,
+          "stop" : 1628710131111,
+          "duration" : 13844
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_registration",
+        "uid" : "177d5cceb61de337",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710066316,
+          "stop" : 1628710068569,
+          "duration" : 2253
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_accept_cookies",
+        "uid" : "69025ff6dc29622a",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710065401,
+          "stop" : 1628710065444,
+          "duration" : 43
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_navigate_to_login",
+        "uid" : "85ce06bef87cfe41",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710070463,
+          "stop" : 1628710071929,
+          "duration" : 1466
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_pagination",
+        "uid" : "c064a821bffd6c9d",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710107852,
+          "stop" : 1628710115407,
+          "duration" : 7555
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_navigate_to_logout",
+        "uid" : "e8f7b210e13d564",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710145179,
+          "stop" : 1628710147480,
+          "duration" : 2301
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_home_page_appearances",
+        "uid" : "6e0733e30415a41d",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710061537,
+          "stop" : 1628710061565,
+          "duration" : 28
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_create_new_article",
+        "uid" : "56bb096f72a7a6fe",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710073799,
+          "stop" : 1628710076698,
+          "duration" : 2899
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_upload_new_comment_from_file",
+        "uid" : "9e2eb8bd514248db",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710082685,
+          "stop" : 1628710106001,
+          "duration" : 23316
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_profile_content_download",
+        "uid" : "49b1985a8bef9ee0",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628710132999,
+          "stop" : 1628710143284,
+          "duration" : 10285
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_edit_own_article",
+        "uid" : "fe73bcb5e79c0018",
+        "parentUid" : "6b5c01299c0b77b6ec05ab15b83f26b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1628710078566,
+          "stop" : 1628710080811,
+          "duration" : 2245
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6b5c01299c0b77b6ec05ab15b83f26b5"
+    } ],
+    "uid" : "fb91444b0dbb90f07c481643912df3dd"
+  } ],
+  "name" : "timeline"
+}
