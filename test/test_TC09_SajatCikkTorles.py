@@ -30,6 +30,8 @@ class TestEditArticle(object):
         article = self.driver.find_element_by_xpath("//h1[normalize-space()='Recipe']")
         article.click()
 
+        time.sleep(5)
+
         assert self.driver.current_url == "http://conduitapp.progmasters.hu:1667/#/articles/recipe"
         WebDriverWait(
             self.driver, 30).until(

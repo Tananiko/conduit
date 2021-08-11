@@ -47,5 +47,5 @@ class TestFileUpload(object):
         comment = self.driver.find_elements_by_class_name("card-text")
         last_comment = comment[-1].text
         time.sleep(2)
-        assert last_comment == "Tasty,"
+        assert last_comment.include == "Tasty"
 
