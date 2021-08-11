@@ -1,0 +1,86 @@
+{
+  "uid" : "a08ba9b6ecbca104",
+  "name" : "test_delete_own_article",
+  "fullName" : "test.test_TC09_SajatCikkTorles.TestEditArticle#test_delete_own_article",
+  "historyId" : "d35d6188d78f2535ab2374ec67e6ee95",
+  "time" : {
+    "start" : 1628664558538,
+    "stop" : 1628664560394,
+    "duration" : 1856
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'",
+  "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestEditArticle object at 0x7f36bf251670>\n\n    def test_delete_own_article(self):\n        conduit_login(self.driver)\n        WebDriverWait(\n            self.driver, 15).until(\n            EC.element_to_be_clickable((By.XPATH, \"//h1[normalize-space()='Recipe']\"))\n        )\n        article = self.driver.find_element_by_xpath(\"//h1[normalize-space()='Recipe']\")\n        article.click()\n    \n        WebDriverWait(\n            self.driver, 50).until(\n            EC.element_to_be_clickable((By.XPATH, \"//button[@class='btn btn-outline-danger btn-sm']//span[1]\"))\n        )\n>       delete_article = self.driver.find_elements_by_xpaths(\"//button[@class='btn btn-outline-danger btn-sm']//span[1]\")\nE       AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'\n\ntest/test_TC09_SajatCikkTorles.py:37: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'",
+    "statusTrace" : "self = <test_TC09_SajatCikkTorles.TestEditArticle object at 0x7f36bf251670>\n\n    def test_delete_own_article(self):\n        conduit_login(self.driver)\n        WebDriverWait(\n            self.driver, 15).until(\n            EC.element_to_be_clickable((By.XPATH, \"//h1[normalize-space()='Recipe']\"))\n        )\n        article = self.driver.find_element_by_xpath(\"//h1[normalize-space()='Recipe']\")\n        article.click()\n    \n        WebDriverWait(\n            self.driver, 50).until(\n            EC.element_to_be_clickable((By.XPATH, \"//button[@class='btn btn-outline-danger btn-sm']//span[1]\"))\n        )\n>       delete_article = self.driver.find_elements_by_xpaths(\"//button[@class='btn btn-outline-danger btn-sm']//span[1]\")\nE       AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'\n\ntest/test_TC09_SajatCikkTorles.py:37: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "dd76c360c6f491cc",
+      "name" : "log",
+      "source" : "dd76c360c6f491cc.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "941566ebb3311fe3",
+      "name" : "stderr",
+      "source" : "941566ebb3311fe3.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditArticle"
+  }, {
+    "name" : "host",
+    "value" : "fv-az47-289"
+  }, {
+    "name" : "thread",
+    "value" : "3818-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC09_SajatCikkTorles"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "a08ba9b6ecbca104.json",
+  "parameterValues" : [ ]
+}
