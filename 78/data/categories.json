@@ -1,0 +1,94 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/settings\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_profile_settings",
+        "uid" : "d0c416eeba47ba34",
+        "parentUid" : "af07a78121f8d261844f0d05f775de5a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628665409373,
+          "stop" : 1628665409603,
+          "duration" : 230
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af07a78121f8d261844f0d05f775de5a"
+    }, {
+      "name" : "AttributeError: 'list' object has no attribute 'click'",
+      "children" : [ {
+        "name" : "test_create_new_article",
+        "uid" : "a30c413fd8d0917",
+        "parentUid" : "13042c33fb6140e3ed0a430b874b43b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628665422285,
+          "stop" : 1628665422297,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "13042c33fb6140e3ed0a430b874b43b8"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@class='btn btn-sm btn-outline-secondary']//span[1]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_edit_own_article",
+        "uid" : "183ef4b514ca2349",
+        "parentUid" : "aaf24028905bd138f73ea0a992176443",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628665424163,
+          "stop" : 1628665424176,
+          "duration" : 13
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "aaf24028905bd138f73ea0a992176443"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".page-link\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_pagination",
+        "uid" : "7b6b439b0fa78316",
+        "parentUid" : "856cbeb1b69c0a2ff1bc042caaa61120",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628665431213,
+          "stop" : 1628665431227,
+          "duration" : 14
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "856cbeb1b69c0a2ff1bc042caaa61120"
+    }, {
+      "name" : "AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpaths'",
+      "children" : [ {
+        "name" : "test_delete_own_article",
+        "uid" : "e1149657d1962542",
+        "parentUid" : "24b8d1042eeefab401cd15189db239e3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628665433123,
+          "stop" : 1628665434977,
+          "duration" : 1854
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "24b8d1042eeefab401cd15189db239e3"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
