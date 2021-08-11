@@ -45,12 +45,4 @@ class TestEditArticle(object):
         time.sleep(2)
         home_page = nav_items[0].text
         assert home_page == "Home"
-        home_page = nav_items[1].text
-        assert home_page == "New Article"
-        home_page = nav_items[2].text
-        assert home_page == "Settings"
-        home_page = nav_items[3].text
-        assert home_page == "A1"
-        home_page = nav_items[4].text
-        assert home_page == "Log out"
 
