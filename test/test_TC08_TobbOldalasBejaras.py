@@ -15,7 +15,7 @@ class TestPaginationConduit(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_pagination(self):
+    def test_pagination_conduit(self):
         conduit_login(self.driver)
         time.sleep(3)
 
