@@ -23,7 +23,7 @@ class TestLogoutConduit(object):
         conduit_login(self.driver)
         time.sleep(5)
 
-        nav_list = self.driver.find_elements_by_css_selector('a.nav-link')
+        self.driver.find_elements_by_css_selector('a.nav-link')
         WebDriverWait(
             self.driver, 15).until(
             EC.element_to_be_clickable((By.XPATH, '//a[@active-class="active"]'))
