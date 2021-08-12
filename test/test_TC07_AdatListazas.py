@@ -4,8 +4,6 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from conduit_data import conduit_login
 
-
-
 class TestDataListArticels(object):
 
     def setup(self):
