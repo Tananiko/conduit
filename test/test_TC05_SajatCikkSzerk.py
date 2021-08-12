@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from conduit_data import conduit_login
 
-class TestEditArticle(object):
+class TestEditOwnArticle(object):
 
     def setup(self):
         browser_options = Options()
