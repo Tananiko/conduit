@@ -7,7 +7,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 from conduit_data import conduit_login
 
-
 class TestLogoutConduit(object):
 
     def setup(self):
