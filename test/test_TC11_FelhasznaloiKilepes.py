@@ -4,12 +4,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from datetime import datetime
 import time
-import random
-import string
 from conduit_data import conduit_login
-from selenium.webdriver.common.keys import Keys
 
 
 class TestLogoutConduit(object):
@@ -23,10 +19,9 @@ class TestLogoutConduit(object):
     def teardown(self):
         self.driver.quit()
 
-    def test_navigate_to_logout(self):
+    def test_logout(self):
         conduit_login(self.driver)
-        WebDriverWait(
-            self.driver, 30)
+        time.sleep(5)
 
         nav_list = self.driver.find_elements_by_css_selector('a.nav-link')
         WebDriverWait(
@@ -47,9 +42,9 @@ class TestLogoutConduit(object):
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
         logged_out_site1 = nav_items[1].text
         assert logged_out_site1 == "Sign in"
-        WebDriverWait(self.driver, 10)
+        time.sleep(3)
 
         logged_out_site2 = nav_items[2].text
         assert logged_out_site2 == "Sign up"
-        WebDriverWait(self.driver, 10)
+        time.sleep(3)
 
