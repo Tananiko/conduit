@@ -1,0 +1,78 @@
+{
+  "uid" : "788206508388bbae",
+  "name" : "test_data_download",
+  "fullName" : "test.test_TC10_AdatlementesFeluletrol.TestDatadownload#test_data_download",
+  "historyId" : "2d963b1a6951c2ac5391ceefad7d1206",
+  "time" : {
+    "start" : 1628801839058,
+    "stop" : 1628801856393,
+    "duration" : 17335
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a2e3e1b3a1d2b22f",
+      "name" : "log",
+      "source" : "a2e3e1b3a1d2b22f.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "54f0ceb787c61d62",
+      "name" : "stderr",
+      "source" : "54f0ceb787c61d62.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC10_AdatlementesFeluletrol"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDatadownload"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-229"
+  }, {
+    "name" : "thread",
+    "value" : "3856-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC10_AdatlementesFeluletrol"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "788206508388bbae.json",
+  "parameterValues" : [ ]
+}
