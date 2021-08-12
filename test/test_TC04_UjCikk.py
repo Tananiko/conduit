@@ -4,14 +4,10 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from datetime import datetime
-import time
-import random
-import string
 from selenium.webdriver.common.keys import Keys
 from conduit_data import conduit_login
 
-class TestNewBlogPost(object):
+class TestCreateNewArticle(object):
 
     def setup(self):
         browser_options = Options()
