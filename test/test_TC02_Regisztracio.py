@@ -4,9 +4,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import datetime
-import time
-from selenium.webdriver.common.keys import Keys
 import random
 import string
 
