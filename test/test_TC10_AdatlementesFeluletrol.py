@@ -33,15 +33,14 @@ class TestDatadownload(object):
         time.sleep(5)
         username = self.driver.find_element_by_xpath("//input[@placeholder='Your username']").text
 
-    with open('profile.csv', 'w') as file:
-        csv_writer = csv.writer(file)
-        next(csv_writer)
-        csv_writer.writerow(["username"])
+        with open('profile.csv', 'w') as file:
+            csv_writer = csv.writer(file)
+            csv_writer.writerow(["username"])
 
-    with open('profile.csv', 'r') as file1:
-        csv_reader = csv.reader(file1)
-        next(csv_reader)
-        for row in csv_reader:
-            assert row[0] == username
+        with open('profile.csv', 'r') as file1:
+            csv_reader = csv.reader(file1)
+            next(csv_reader)
+            for row in csv_reader:
+                assert row[0] == username
     time.sleep(5)
 
