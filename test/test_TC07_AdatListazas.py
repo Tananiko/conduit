@@ -1,8 +1,8 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from conduit_data import conduit_login
+import time
 
 class TestDataListArticels(object):
 
