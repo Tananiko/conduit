@@ -42,5 +42,5 @@ class TestDatadownload(object):
             next(csv_reader)
             for row in csv_reader:
                 assert row[0] == username
-    time.sleep(5)
+        time.sleep(5)
 
