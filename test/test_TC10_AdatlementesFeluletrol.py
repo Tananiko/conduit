@@ -1,12 +1,8 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import random
-import string
 import csv
-from selenium.webdriver.common.keys import Keys
 from conduit_data import conduit_login
 
 class TestDatadownload(object):
@@ -24,7 +20,6 @@ class TestDatadownload(object):
     def test_data_download(self):
         conduit_login(self.driver)
         time.sleep(5)
-
 
         nav_items = self.driver.find_elements_by_css_selector('li.nav-item')
         profile_setting = nav_items[2]
