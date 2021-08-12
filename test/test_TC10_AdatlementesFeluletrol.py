@@ -34,9 +34,8 @@ class TestDatadownload(object):
         username = self.driver.find_element_by_xpath("//input[@placeholder='Your username']").text
 
         with open('profile.csv', 'w') as file:
-            file.write(username)
-            # csv_writer = csv.writer(file)
-            # csv_writer.writerow(["username"])
+            csv_writer = csv.writer(file)
+            csv_writer.writerow(["username"])
 
         with open('profile.csv', 'r') as file1:
             csv_reader = csv.reader(file1)
