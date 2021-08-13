@@ -29,6 +29,8 @@ docker-compose build --no-cache
 
 # How to Run
 
+If you are not using this docker setup. You can visit the hosted version: http://conduitapp.progmasters.hu:1667/#/
+The test suite in this repository has been using this website for testrun, without a dockerization application
 ```
 docker-compose up -d
 ```
