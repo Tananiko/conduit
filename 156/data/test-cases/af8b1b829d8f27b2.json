@@ -1,0 +1,78 @@
+{
+  "uid" : "af8b1b829d8f27b2",
+  "name" : "test_upload_new_comment_from_file",
+  "fullName" : "test.test_TC06_AdatsorozatFile.TestUploadNewCommentFromFile#test_upload_new_comment_from_file",
+  "historyId" : "ec59fda87fbb7a33f143b2b2a42c43d6",
+  "time" : {
+    "start" : 1628852899883,
+    "stop" : 1628852923628,
+    "duration" : 23745
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "7f2bb17c36fad12f",
+      "name" : "log",
+      "source" : "7f2bb17c36fad12f.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "89a1d4fdae7dd5cf",
+      "name" : "stderr",
+      "source" : "89a1d4fdae7dd5cf.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_TC06_AdatsorozatFile"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUploadNewCommentFromFile"
+  }, {
+    "name" : "host",
+    "value" : "fv-az47-628"
+  }, {
+    "name" : "thread",
+    "value" : "3714-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_TC06_AdatsorozatFile"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "af8b1b829d8f27b2.json",
+  "parameterValues" : [ ]
+}
